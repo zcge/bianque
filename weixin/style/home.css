@@ -1,0 +1,292 @@
+body,div,ul,li,p,span{
+	padding:0;
+	border:0;
+	margin:0;
+}
+span{
+   line-height: 1;
+    display:block;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+body {
+    font-family: "Microsoft YaHei";
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+.clearfix {
+    *+height: 1%;
+}
+
+.flex-box {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+}
+.flex-item {
+    -webkit-box-flex: 1;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1;
+    /* OLD - Firefox 19- */
+    width: 20%;
+    /* For old syntax, otherwise collapses. */
+    -webkit-flex: 1;
+    /* Chrome */
+    -ms-flex: 1;
+    /* IE 10 */
+    flex: 1;
+}
+.top-tab{
+	width: 100%;
+}
+.top-tab li{
+	text-align: center;
+	font-size: 0.7rem;
+	background-color: #f4f4f4;
+	height: 1.8rem;
+	line-height: 1.8rem;
+}
+.top-tab .active{
+	background-color: #ffffff;
+}
+.head{
+	width: 100%;
+}
+.photo-box{
+    margin: 0 auto;
+    margin-top:1.2rem;
+    width: 80%;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.photo-img{
+    margin: 0 auto;
+    width: 4rem;
+    height: 4rem;
+    border-radius:50%;
+    margin-bottom: 0.8rem;
+}
+.photo-box span{
+}
+.head p{
+    width: 90%;
+    margin: 0.4rem auto;
+    font-size: 0.45rem;
+    color:#cecece;
+}
+.page{
+    border-top:0.25rem solid #f7f7f7;
+}
+.statistics-box{
+    margin-top: 0.8rem;
+    height: 2.925rem;
+    text-align: center;
+}
+.statistics-box .num{
+    margin-bottom: 0.2rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.statistics-box span{
+    font-size: 0.5rem;
+    color:#b5b5b5;
+}
+.plan{
+    background-color: #6bc257;
+    color:#fff;
+    padding:0.6rem 0 1rem 0;
+}
+.plan .title{
+    width: 90%;
+    margin: 0.4rem auto;
+    font-size: 1rem;
+}
+.plan p{
+    width: 90%;
+    margin: 0.4rem auto;
+    font-size: 0.45rem;
+}
+.list{
+    width: 100%;
+}
+.list li{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 0.8rem;
+    border-bottom:3px solid #f6f6f6; 
+}
+.list .maintitle{
+    font-size: 0.7rem;
+}
+.list .subtitle{
+    margin-top: 0.3rem;
+    color:#b1b1b1;
+    font-size: 0.6rem;
+}
+.list .list-text{
+    color:#bababa;
+    font-size: 0.6rem;
+}
+.list .list-text i{
+    vertical-align:-8%;
+    display: inline-block;
+    margin-left:0.35rem;
+
+    width: 0.35rem;
+    height: 0.6rem;
+    background-image: url("../images/icon.jpg") ;
+    background-size: 100% 100%;
+}
+.list .title-box{
+    position: relative;
+    margin-bottom: 0.8rem;
+    float: left;
+}
+.list .list-text{
+    float: right;
+}
+
+.goAdd{
+    font-size: 0.8rem;
+    line-height: 2rem;
+    height: 2rem;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: #6cc159;
+}
+.agree-clause{
+    height: 2.8rem;
+    font-size: 0.625rem;
+    padding-left: 5%;
+    padding-top: 1rem;
+}
+.agree-clause a{
+    color:#97c3f2;
+}
+.comment{
+   padding-right: 5%;
+   padding-left: 5%;
+   background-color: #f7f7f7;
+   font-size: 0.5rem;
+   color:#717171;
+}
+.comment-photo{
+    width: 1.5rem;
+    height: 1.5rem;
+    float: left;
+}
+.user-say{
+   float: left;
+   width: 80%;
+   padding-left: 5%;
+}
+.comment ul,
+.comment li{
+    padding-top:0.4rem;
+    padding-bottom: 0.4rem;
+}
+.technological-process{
+   border-top:0.25rem solid #f7f7f7;
+}
+.technological-process .content{
+    position: relative;
+    height: 6.7rem;
+    color:#87c878;
+    font-size: 0.56rem;
+}
+.technological-process .pa{position: absolute;}
+.technological-process .p1{
+    top:1rem;
+    left:1rem;
+    border:1px solid #87c878;
+    border-radius: 0.2rem;
+    padding: 0.3rem 0.5rem;
+}
+.technological-process .p2{
+    top:1rem;
+    left:4rem;
+    padding: 0.3rem 0.5rem;
+}
+.technological-process .p3{
+    top:1rem;
+    left:5.2rem;
+    border:1px solid #87c878;
+    border-radius: 0.2rem;
+    padding: 0.3rem 0.5rem;
+}
+.technological-process .p4{
+    top:1rem;
+    left:8.2rem;
+    padding: 0.3rem 0.5rem;
+}
+.technological-process .p5{
+    top:1rem;
+    left:9.4rem;
+    border:1px solid #87c878;
+    border-radius: 0.2rem;
+    padding: 0.3rem 0.5rem;
+}
+.technological-process .p6{
+    transform:rotate(90deg);
+    -ms-transform:rotate(90deg);     /* IE 9 */
+    -moz-transform:rotate(90deg);    /* Firefox */
+    -webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+    -o-transform:rotate(90deg);
+     padding: 0.3rem 0.5rem;
+     left:11rem;
+     top:2.3rem;
+}
+.technological-process .p7{
+    top:3.5rem;
+    left:8rem;
+    border:1px solid #87c878;
+    border-radius: 0.2rem;
+    padding: 0.3rem 0.5rem;
+}
+.technological-process .p8{
+    top:3.5rem;
+    left:6.7rem;
+    padding: 0.3rem 0.5rem;
+}
+.technological-process .p9{
+    top:3.5rem;
+    left:3.5rem;
+    border:1px solid #87c878;
+    border-radius: 0.2rem;
+    padding: 0.3rem 0.5rem;
+}
+.agree-clause .left-box{
+    width: 0.5rem;
+    height: 0.5rem;
+    float: left;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius:50%;
+    border:1px solid #87c878;
+    margin-top:0.2rem;
+}
+.agree-clause .right-box{
+    float: left;
+}
+.technological-process .list li{
+    border:0;
+}
