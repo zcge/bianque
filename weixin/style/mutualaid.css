@@ -1,0 +1,183 @@
+body{
+	background-color: #f7f7f7;
+}
+.fl{
+	float: left;
+}
+.top-tab {
+    width: 100%;
+}
+
+.top-tab li {
+    text-align: center;
+    font-size: 0.7rem;
+    height: 1.8rem;
+    line-height: 1.8rem;
+    background-color: #67b654;
+}
+.top-tab a{
+	color:#a3d398;
+}
+.top-tab .active a{
+    background-color: #6EC159;
+    color:#fff;
+}
+.a-fill {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.head-panel{
+	width: 100%;
+	background-color: #6EC159;
+	color:#fff;
+	text-align: center;
+	padding: 0.4rem 0;
+}
+.head-panel h2{
+	font-size: 1rem;
+}
+
+.head-panel h3{
+	font-size: 0.5rem;
+	font-weight: 100;
+	line-height: 1.5;
+}
+.head-panel .text-box{
+	padding-top:0.6rem; 
+	
+}
+.panel-1{
+	width: 100%;
+	padding: 0.6rem 0;
+	background-color: #fff;
+	text-align: center;
+	color:#000;
+}
+.panel-1 h2{
+	font-size:1rem;
+}
+.panel-1 h3{
+	font-size:0.5rem;
+	font-weight: 100;
+	line-height: 1.5;
+	color:#9B9B9B;
+}
+.panel-2{
+	margin-top: 0.4rem;
+	padding:0.6rem 0;
+	background-color: #fff;
+}
+.panel-2 h2{
+	font-size: 0.8rem;
+}
+.panel-2 h3{
+	font-size: 0.6rem;
+}
+.panel-2 h4{
+	color:#6EC159;
+	line-height: 1.5;
+	font-size: 0.5rem;
+}
+.panel-2 .left-box{
+	border-right: 0.1rem solid #DEDEDE;
+}
+.panel-2 .right-box{
+	text-align: center;
+}
+.panel-2 .right-box h3{
+	color:#9b9b9b;
+	font-weight: 100;
+}
+.footer{
+	padding-top: 0.5rem;
+	background-color:#F5A623;
+	position: fixed;
+	bottom: 0;
+	color:#fff;
+	text-align: center;
+	width: 100%;
+}
+.footer h3{
+	line-height: 1.5;
+	font-size: 0.7rem;
+}
+.footer h4{
+	line-height: 1.5;
+	font-size: 0.6rem;
+}
+.footer .btn{
+	background-color: #fff;
+	margin: 0.4rem auto;
+	padding:0.4rem 0; 
+	width: 12rem;
+	border-radius: 0.3rem;
+	font-size: 0.8rem;
+	color:#F4A117;
+}
+.panel-2 .img-box{
+	width: 1.4rem;
+	height: 1.4rem;
+	border-radius:50%;
+	margin-left:0.8rem;
+	margin-right: 0.6rem;
+	overflow: hidden;
+}
+.mask,.mask2{
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.5;
+	position: absolute;
+	z-index: 1000;
+	display: none;
+}
+.bitmap-box{
+	top:50%;
+	left:50%;
+	margin-top: -6rem;
+	margin-left: -5.5rem;
+	width: 11rem;
+	height: 12rem;
+	background-color: #fff;
+	border-radius:0.3rem;
+	z-index: 1100;
+	position:fixed;
+	text-align: center;
+	display: none;
+}
+.bitmap-box h2{
+	margin-top: 1.5rem;
+	font-size: 0.7rem;
+	line-height: 1.5;
+	font-weight: bold;
+}
+.bitmap-box h3{
+	font-size: 0.5rem;
+	line-height: 1.5;
+	color:#9B9B9B;
+	font-weight: normal;
+}
+.code-img{
+	width: 6rem;
+	height: 6rem;
+	margin: 1rem auto;
+}
+.arrow{
+	position: absolute;
+	top:0.2rem;
+	right:0.2rem;
+	width: 1rem;
+	height: 1rem;
+	z-index: 1200;
+	display: none;
+}
+
+
+
+
+
+
+
+
+
