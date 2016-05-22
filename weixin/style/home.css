@@ -196,7 +196,10 @@ body {
 .list .list-text {
     float: right;
 }
-
+.main{
+    padding-bottom: 2rem;
+    background-color: #fff;
+}
 .goAdd {
     font-size: 0.8rem;
     line-height: 2rem;
@@ -205,6 +208,8 @@ body {
     text-align: center;
     color: #fff;
     background-color: #6cc159;
+    position: fixed;
+    bottom: 0;
 }
 
 .agree-clause {
@@ -441,7 +446,7 @@ body {
     display: none;
 }
 
-body{
+.page-2{
     background-color: #f7f7f7;
 }
 input{
