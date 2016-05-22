@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>扁鹊兄弟互助计划</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="./style/base.css">
+    <link rel="stylesheet" href="./style/information.css">
+    <script src="./js/zepto.js"></script>
+    <script>
+    ! function() {
+        function a() {
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 16 + "px"
+        }
+        var b = null;
+        window.addEventListener("resize", function() {
+            clearTimeout(b), b = setTimeout(a, 300)
+        }, !1), a()
+    }(window);
+    </script>
+</head>
+
+<body>
+    <div class="form">
+        <form>
+            <table class='form-table'>
+                <tr>
+                    <td class="td1">姓　名:</td>
+                    <td class="td2">
+                        <input type="text" name='userName' placeholder="填写您的真实姓名" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td1">身份证: </td>
+                    <td class="td2">
+                        <input type="text" name="card" placeholder="填写您的身份证号码" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td1">手机号:</td>
+                    <td class="td2">
+                        <input type="tel" name="mobile" placeholder="填写您的手机号码" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td1">验证码:</td>
+                    <td class="td2 flex-box">
+                        <div class='flex-item check-item'>
+                            <!-- 验证码最大的长度,是4你可以改变这个值来改变最大长度的限制-->
+                            <input type="text" name="mcode" maxlength="4"/>
+                        </div>
+                        <div class='flex-item check-item check-text getCodeButton'>
+                            获取验证码
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="small-tip">
+        请完善你的身份信息，填写真实姓名，否则不予理赔。
+    </div>
+    <div class="greenbutton">
+        确认加入
+    </div>
+    <script>
+    Zepto(function($) {
+        var checkUserName = function(userName, result) {
+            if (userName != "") {
+                result.userName = true;
+            } else {
+                result.userName = false;
+            }
+        }
+        var checkCard = function(card, result) {
+            if (card.length == 18 && card != "") {
+                result.card = true;
+            } else {
+                result.card = false;
+            }
+        }
+        var checkMobile = function(mobile, result) {
+            if (mobile.length == 18 && card != "") {
+                result.mobile = true;
+            } else {
+                result.mobile = false;
+            }
+        }
+        var mcode = function(mcdoe, result) {
+            if (mcode != "") {
+                result.mcode = true;
+            } else {
+                result.mcode = false;
+            }
+        }
+        var check = function(obj, result) {
+            var result = {};
+            for (var i = 0; i < obj.length; i++) {
+                switch (obj[i].name) {
+                    case "userName":
+                        checkUserName(obj[i].value, result);
+                        break;
+                    case "card":
+                        checkCard(obj[i].value, result);
+                        break;
+                    case "mobile":
+                        checkMobile(obj[i].value, result);
+                        break;
+                    case "mcode":
+                        mcode(obj[i].value, result);
+                        break;
+                }
+            }
+            return result;
+        }
+        var flagCodeButton = true;
+        var num = 60;
+        var timeInterval;
+        //点击获取验证码按钮
+        $(".getCodeButton").click(function() {
+            if (flagCodeButton) {
+                flagCodeButton = !flagCodeButton;
+                $(".getCodeButton").addClass('getCodeBtn-disable');
+                $(".getCodeButton").html(num + "s");
+                timeInterval = setInterval(function() {  
+                    num--;
+                    $(".getCodeButton").html(num + "s");
+                    if (num < 0) {
+                        num = 60;
+                        $(".getCodeButton").html("获取验证码").removeClass('getCodeBtn-disable');
+                        flagCodeButton = !flagCodeButton;
+                        clearInterval(timeInterval);
+                    }
+                }, 1000)
+            }
+        });
+
+        //点击提交数据
+        $(".greenbutton").click(function() {
+            var postData = $('form').serializeArray();
+
+            //这里错误提示的样式还没给出
+            var afterCheckData = check(postData);
+
+            // postData是你需要提交的信息，
+            // ajax写在这里
+            console.log(postData);
+
+        });
+    });
+    </script>
+</body>
+
+</html>
