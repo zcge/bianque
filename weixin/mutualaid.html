@@ -23,124 +23,75 @@
     }(window);
     </script>
 </head>
-<div class="mask"></div>
-<div class="arrow">
-    <img src="images/img1.jpg" width="100%" alt="">
-</div>
-<div class="mask2"></div>
-<div class="bitmap-box">
-<h2>您忘了关注我们的公众号</h2>
-<h3>长按识别二维码关注“扁鹊兄弟”</h3>
-    <div class="code-img">
-    <img src="./images/Bitmap.jpg"  width="100%" alt="">
+
+<body class="no-info-page">
+    <div class="mask"></div>
+    <div class="arrow">
+        <img src="images/img1.jpg" width="100%" alt="">
     </div>
-</div>
-<!-- 顶部tab按钮 -->
-<div class="page">
-    <ul class="top-tab flex-box">
-        <li class="flex-item">
-            <a href="http://www.baidu.com" class="a-fill">互助计划</a>
-        </li>
-        <li class="flex-item active">
-            <a href="http://www.baidu.com" class="a-fill">我的互助</a>
-        </li>
-    </ul>
-    <div class="head-panel">
-        <h2>阿布</h2>
-        <h3>等待期:45/180天</h3>
-        <div class="text-box flex-box">
-            <div class="right-text flex-item">
-                <h2>300000</h2>
-                <h3>成功理赔可获互助金</h3>
+    <div class="mask2"></div>
+    <div class="bitmap-box">
+        <h2>您忘了关注我们的公众号</h2>
+        <h3>长按识别二维码关注“扁鹊兄弟”</h3>
+        <div class="code-img">
+            <img src="./images/Bitmap.jpg" width="100%" alt="">
+        </div>
+    </div>
+    <!-- 顶部tab按钮 -->
+    <div class="page">
+  
+        <ul class="top-tab flex-box no-info-topbar">
+            <li class="flex-item">
+                <a href="http://www.baidu.com" class="a-fill">互助计划</a>
+            </li>
+            <li class="flex-item active">
+                <a href="http://www.baidu.com" class="a-fill">我的互助</a>
+            </li>
+        </ul>
+        <div class="no-info" style="width:10rem;position:fixed;top:4rem;;left:50%;margin-left:-5rem;">
+            <div class="no-info-content">
+                <img src="images/Group.png"  width="100%" alt="">
             </div>
-            <div class="left-text flex-item">
-                <h2>+10</h2>
-                <h3>今日增额</h3>
+            <div style="font-size:0.8rem;color:#4A4A4A;text-align:center;">
+                你没有加入任何互助计划
             </div>
+            
         </div>
     </div>
-    <div class="panel-1 flex-box">
-        <div class="flex-item">
-            <h2>25</h2>
-            <h3>年龄</h3>
-        </div>
-        <div class="flex-item">
-            <h2>1</h2>
-            <h3>分摊系数</h3>
-        </div>
-        <div class="flex-item">
-            <h2>3</h2>
-            <h3>速算分摊金额</h3>
-        </div>
-    </div>
-    <div class="panel-2 flex-box">
-        <div class="left-box flex-item clearfix">
-                <div class="fl img-box">
-                    <img src="./images/img1.jpg" width="100%" alt="头像">
-                </div>
-                <div class="fl">
-                    <h3>姓罗的胖子小组</h3>
-                    <h4>已加入</h4>
-                </div>
-           
-        </div>
-        <div class="right-box flex-item">
-            <div class="flex-box">
-                <div class="flex-item">
-                    <h2>2345</h2>
-                    <h3>本小组人数</h3>
-                </div>
-                <div class="flex-item">
-                    <h2>213450</h2>
-                    <h3>计划总人数</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="footer">
-    <h3>
-        邀请好友加入，互助金额立增1000!!
-    </h3>
-    <h4>
-        还送好友1万元保额礼
-    </h4>
-    <div class="btn goInvitation">马上邀请</div>
-</div>
-<body>
+ 
     <script>
-    var openCode = function(){
+    var openCode = function() {
         $(".mask2").show();
         $(".bitmap-box").show();
     }
-    var closeCode = function(){
+    var closeCode = function() {
         $(".mask2").hide();
         $(".bitmap-box").hide();
     }
     Zepto(function($) {
         var maskDom = $(".mask");
         var arrow = $(".arrow");
-        var show = function(){
+        var show = function() {
             maskDom.show();
             arrow.show();
         }
-        var hide = function(){
+        var hide = function() {
             maskDom.hide();
             arrow.hide();
         }
         var timer;
-        $(".goInvitation").click(function(){
+        $(".goInvitation").click(function() {
             show();
             //点击影藏
-            $(".mask").on("click",function(){
+            $(".mask").on("click", function() {
                 hide();
                 clearTimeout(timer);
             });
             //延迟影藏
-            timer = setTimeout(function(){
+            timer = setTimeout(function() {
                 hide();
                 clearTimeout(timer);
-            },5000);
+            }, 5000);
         });
     });
     </script>

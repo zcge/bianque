@@ -55,6 +55,7 @@
             </div>
             <p>
                 死磕自己，娱乐大家。大家好，我是罗胖子。身体是死磕的本钱，虽然没啥毛病，但是买份保险未雨绸缪总是好的，反正也不要钱。
+        
             </p>
         </div>
         <!-- 主内容区域 -->
@@ -84,7 +85,7 @@
                 </p>
             </div>
             <ul class="list">
-                <li>
+                <li class="click-li" data-li-num = "0">
                     <div class="clearfix">
                         <div class="title-box">
                             <div class="maintitle">
@@ -99,7 +100,7 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="click-li" data-li-num = "1">
                     <div class="clearfix">
                         <div class="title-box">
                             <div class="maintitle">
@@ -114,7 +115,7 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="click-li" data-li-num = "2">
                     <div class="clearfix">
                         <div class="title-box">
                             <div class="maintitle">
@@ -126,7 +127,7 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="click-li" data-li-num = "3">
                     <div class="clearfix">
                         <div class="title-box">
                             <div class="maintitle">
@@ -140,7 +141,7 @@
                 </li>
             </ul>
             <ul class="list" style="border-top:0.25rem solid #f7f7f7">
-                <li>
+                <li class="click-li" data-li-num = "4">
                     <div class="clearfix">
                         <div class="title-box">
                             <div class="maintitle">
@@ -152,7 +153,7 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="click-li" data-li-num = "5">
                     <div class="clearfix">
                         <div class="title-box">
                             <div class="maintitle">
@@ -166,7 +167,7 @@
                 </li>
             </ul>
             <ul class="list" style="border-top:0.25rem solid #f7f7f7">
-                <li>
+                <li class="click-li" data-li-num = "6">
                     <div class="clearfix">
                         <div class="title-box">
                             <div class="maintitle">
@@ -182,7 +183,7 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="click-li" data-li-num = "7">
                     <div class="clearfix">
                         <div class="title-box">
                             <div class="maintitle">
@@ -288,187 +289,232 @@
             免费加入
         </div>  
     </div>
-    <div class="page-2">
-         <div class="form">
-        <form>
-            <table class='form-table'>
-                <tr>
-                    <td class="td1">姓　名:</td>
-                    <td class="td2">
-                        <input type="text" name='userName' placeholder="填写您的真实姓名" />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="td1">身份证: </td>
-                    <td class="td2">
-                        <input type="text" name="card" placeholder="填写您的身份证号码" />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="td1">手机号:</td>
-                    <td class="td2">
-                        <input type="tel" name="mobile" placeholder="填写您的手机号码" />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="td1">验证码:</td>
-                    <td class="td2 flex-box">
-                        <div class='flex-item check-item'>
-                            <!-- 验证码最大的长度,是4你可以改变这个值来改变最大长度的限制-->
-                            <input type="text" name="mcode" maxlength="4"/>
-                        </div>
-                        <div class='flex-item check-item check-text getCodeButton'>
-                            获取验证码
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </div>
     <div class="small-tip">
         请完善你的身份信息，填写真实姓名，否则不予理赔。
     </div>
     <div class="greenbutton">
         确认加入
     </div>
-    
+
+    </div>
+    <div class="tip">
+       <div class='tip-head'>
+            <div class="tip-close-btn">
+                <img src="images/close.jpg" width="100%" alt="">
+            </div>   
+       </div>
+       <div class="tip-page tip-0 active">
+            <div class="tip-title">
+                第一节 计划宗旨
+            </div>
+            <p>
+               重大疾病和意外身故互助计划在自愿加入的前提下，本着“互助互爱”的宗旨，在会员不幸罹患本计划约定的疾病时，其他会员为其进行互助。 
+            </p>
+            <div class="tip-title">
+                第一节 计划宗旨
+            </div>
+            <p>
+                本计划为互助金预缴型开放计划，预缴的互助金与扁鹊兄弟互助平台上其他开放计划可共享使用。
+            </p>
+            <div class="tip-title">
+                第一节 计划宗旨
+            </div>
+            <p>
+                会员可自愿加入、自愿退出本计划。
+            </p>
+            <ul>
+                <li>3.1      加入条件</li>
+                <li>(1)    会员本人申请，未成年人可由父母申请。</li>
+                <li>(2)    本计划接受的加入时年龄范围为出生满28天至60周岁(含)</li>
+                <li>(3)    加入本计划之时身体健康，一年内无重大疾病及相关症状就诊或治疗史。</li>
+            </ul>
+            <div class="tip-title">
+                第一节 计划宗旨
+            </div>
+            <p>
+                会员可自愿加入、自愿退出本计划。
+            </p>
+            <ul class="last-tip">
+                <li>3.1      加入条件</li>
+                <li>(1)    会员本人申请，未成年人可由父母申请。</li>
+                <li>(2)    本计划接受的加入时年龄范围为出生满28天至60周岁(含)</li>
+                <li>(3)    加入本计划之时身体健康，一年内无重大疾病及相关症状就诊或治疗史。</li>
+            </ul>
+            <div class="tip-footer">
+                <a href="">详情</a>
+            </div>
+       </div>
+        <div class="tip-page tip-1">
+           1
+       </div> 
+        <div class="tip-page tip-2">
+          2
+       </div> 
+        <div class="tip-page tip-3">
+           3
+       </div>  
+
+        <div class="tip-page tip-4">
+          4
+       </div> 
+        <div class="tip-page tip-5">
+           5
+       </div> 
+        <div class="tip-page tip-6">
+           6
+       </div> 
+        <div class="tip-page tip-7">
+           7
+       </div>
+       
     </div>
     <script>
     Zepto(function($) {
-        var t = getid("text-slider-box"),
-            t1 = getid("text-slider-text"),
-            t2 = getid("text-slider-copy"),
-            timer;
-        t2.innerHTML = t1.innerHTML;
-        var count = 0;
-        var back = function(){
-            $(".page-2").hide();
-            $(".main").show();
-        };
-        function mar() {
-            if (t.scrollTop % 30 == 0) {
-                count++;
-                if (count % 30 == 0) {
-                    t.scrollTop++;
-                }
-            } else {
-                if (t2.offsetTop <= t.scrollTop)
-                    t.scrollTop -= t1.offsetHeight;
-                else
-                    t.scrollTop++;
-            }
-        }
-        timer = setInterval(mar, 30);
-
-        function getid(id) {
-            return document.getElementById(id);
-        }
-        //点击选中
-        var clickFlag = true;
-        var goAddDom = $(".goAdd");
-        var radioDom = $(".agree-clause .btn")
-        $(".agree-clause .btn").click(function() {
-            if (clickFlag) {
-                clickFlag = false;
-                radioDom.removeClass("active");
-                goAddDom.addClass('go-add-disable');
-            } else {
-                clickFlag = true;
-                radioDom.addClass('active');
-                goAddDom.removeClass("go-add-disable")
-            }
+        // $(".tip-page").css("height",document.body.clientHeight+"px");
+        $(".click-li").click(function(){
+            var num = $(this).attr("data-li-num");
+            $(".tip").show();
+            $(".tip .active").removeClass('active');
+            $(".tip-"+num).addClass('active');
         });
-        goAddDom.click(function(){
-           if(goAddDom.hasClass('go-add-disable')){
-             return
-           }else {
-            $(".page-2").show();
-            $(".main").hide();
-           }
-        });
-        var checkUserName = function(userName, result) {
-            if (userName != "") {
-                result.userName = true;
-            } else {
-                result.userName = false;
-            }
-        }
-        var checkCard = function(card, result) {
-            if (card.length == 18 && card != "") {
-                result.card = true;
-            } else {
-                result.card = false;
-            }
-        }
-        var checkMobile = function(mobile, result) {
-            if (mobile.length == 18 && card != "") {
-                result.mobile = true;
-            } else {
-                result.mobile = false;
-            }
-        }
-        var mcode = function(mcdoe, result) {
-            if (mcode != "") {
-                result.mcode = true;
-            } else {
-                result.mcode = false;
-            }
-        }
-        var check = function(obj, result) {
-            var result = {};
-            for (var i = 0; i < obj.length; i++) {
-                switch (obj[i].name) {
-                    case "userName":
-                        checkUserName(obj[i].value, result);
-                        break;
-                    case "card":
-                        checkCard(obj[i].value, result);
-                        break;
-                    case "mobile":
-                        checkMobile(obj[i].value, result);
-                        break;
-                    case "mcode":
-                        mcode(obj[i].value, result);
-                        break;
-                }
-            }
-            return result;
-        }
-        var flagCodeButton = true;
-        var num = 60;
-        var timeInterval;
-        //点击获取验证码按钮
-        $(".getCodeButton").click(function() {
-            if (flagCodeButton) {
-                flagCodeButton = !flagCodeButton;
-                $(".getCodeButton").addClass('getCodeBtn-disable');
-                $(".getCodeButton").html(num + "s");
-                timeInterval = setInterval(function() {  
-                    num--;
-                    $(".getCodeButton").html(num + "s");
-                    if (num < 0) {
-                        num = 60;
-                        $(".getCodeButton").html("获取验证码").removeClass('getCodeBtn-disable');
-                        flagCodeButton = !flagCodeButton;
-                        clearInterval(timeInterval);
-                    }
-                }, 1000)
-            }
-        });
-
-        //点击提交数据
-        $(".greenbutton").click(function() {
-            var postData = $('form').serializeArray();
-            //这里错误提示的样式还没给出）
-            var afterCheckData = check(postData);
-
-            // postData是你需要提交的信息，
-            // ajax写在这里
-            console.log(postData);
-            back();
-
+        $(".tip-close-btn").click(function(){
+             $(".tip").hide();
         });
     });
+    //     var t = getid("text-slider-box"),
+    //         t1 = getid("text-slider-text"),
+    //         t2 = getid("text-slider-copy"),
+    //         timer;
+    //     t2.innerHTML = t1.innerHTML;
+    //     var count = 0;
+    //     var back = function(){
+    //         $(".page-2").hide();
+    //         $(".main").show();
+    //     };
+    //     function mar() {
+    //         if (t.scrollTop % 30 == 0) {
+    //             count++;
+    //             if (count % 30 == 0) {
+    //                 t.scrollTop++;
+    //             }
+    //         } else {
+    //             if (t2.offsetTop <= t.scrollTop)
+    //                 t.scrollTop -= t1.offsetHeight;
+    //             else
+    //                 t.scrollTop++;
+    //         }
+    //     }
+    //     timer = setInterval(mar, 30);
+
+    //     function getid(id) {
+    //         return document.getElementById(id);
+    //     }
+    //     //点击选中
+    //     var clickFlag = true;
+    //     var goAddDom = $(".goAdd");
+    //     var radioDom = $(".agree-clause .btn")
+    //     $(".agree-clause .btn").click(function() {
+    //         if (clickFlag) {
+    //             clickFlag = false;
+    //             radioDom.removeClass("active");
+    //             goAddDom.addClass('go-add-disable');
+    //         } else {
+    //             clickFlag = true;
+    //             radioDom.addClass('active');
+    //             goAddDom.removeClass("go-add-disable")
+    //         }
+    //     });
+    //     goAddDom.click(function(){
+    //        if(goAddDom.hasClass('go-add-disable')){
+    //          return
+    //        }else {
+    //         $(".page-2").show();
+    //         $(".main").hide();
+    //        }
+    //     });
+    //     var checkUserName = function(userName, result) {
+    //         if (userName != "") {
+    //             result.userName = true;
+    //         } else {
+    //             result.userName = false;
+    //         }
+    //     }
+    //     var checkCard = function(card, result) {
+    //         if (card.length == 18 && card != "") {
+    //             result.card = true;
+    //         } else {
+    //             result.card = false;
+    //         }
+    //     }
+    //     var checkMobile = function(mobile, result) {
+    //         if (mobile.length == 18 && card != "") {
+    //             result.mobile = true;
+    //         } else {
+    //             result.mobile = false;
+    //         }
+    //     }
+    //     var mcode = function(mcdoe, result) {
+    //         if (mcode != "") {
+    //             result.mcode = true;
+    //         } else {
+    //             result.mcode = false;
+    //         }
+    //     }
+    //     var check = function(obj, result) {
+    //         var result = {};
+    //         for (var i = 0; i < obj.length; i++) {
+    //             switch (obj[i].name) {
+    //                 case "userName":
+    //                     checkUserName(obj[i].value, result);
+    //                     break;
+    //                 case "card":
+    //                     checkCard(obj[i].value, result);
+    //                     break;
+    //                 case "mobile":
+    //                     checkMobile(obj[i].value, result);
+    //                     break;
+    //                 case "mcode":
+    //                     mcode(obj[i].value, result);
+    //                     break;
+    //             }
+    //         }
+    //         return result;
+    //     }
+    //     var flagCodeButton = true;
+    //     var num = 60;
+    //     var timeInterval;
+    //     //点击获取验证码按钮
+    //     $(".getCodeButton").click(function() {
+    //         if (flagCodeButton) {
+    //             flagCodeButton = !flagCodeButton;
+    //             $(".getCodeButton").addClass('getCodeBtn-disable');
+    //             $(".getCodeButton").html(num + "s");
+    //             timeInterval = setInterval(function() {  
+    //                 num--;
+    //                 $(".getCodeButton").html(num + "s");
+    //                 if (num < 0) {
+    //                     num = 60;
+    //                     $(".getCodeButton").html("获取验证码").removeClass('getCodeBtn-disable');
+    //                     flagCodeButton = !flagCodeButton;
+    //                     clearInterval(timeInterval);
+    //                 }
+    //             }, 1000)
+    //         }
+    //     });
+
+    //     //点击提交数据
+    //     $(".greenbutton").click(function() {
+    //         var postData = $('form').serializeArray();
+    //         //这里错误提示的样式还没给出）
+    //         var afterCheckData = check(postData);
+
+    //         // postData是你需要提交的信息，
+    //         // ajax写在这里
+    //         console.log(postData);
+    //         back();
+
+    //     });
+    // });
     </script>
 </body>
 

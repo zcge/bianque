@@ -61,3 +61,16 @@ input{
 	background-color: #D6D6D6;
 	color:#fff;
 }
+.verify{
+	line-height: 1.5;
+	width: 10.83rem;
+	text-align: center;
+	background-color: #FFF3D7;
+	color:#8B572A;
+	font-size: 0.6rem;
+	padding-top: 0.76rem;
+	padding-bottom: 0.76rem;
+	margin:0 auto;
+	margin-top: 0.5rem;
+	display: none;
+}

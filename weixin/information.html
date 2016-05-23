@@ -61,9 +61,14 @@
             </table>
         </form>
     </div>
+    <div class="verify">
+        对不起你的年龄已经不适合加入该计划 <br>
+        敬请期待下一波计划
+    </div>
     <div class="small-tip">
         请完善你的身份信息，填写真实姓名，否则不予理赔。
     </div>
+
     <div class="greenbutton">
         确认加入
     </div>
@@ -71,30 +76,35 @@
     Zepto(function($) {
         var checkUserName = function(userName, result) {
             if (userName != "") {
-                result.userName = true;
+                result.userName = "ok";
             } else {
-                result.userName = false;
+                result.userName = "nothing";
             }
         }
         var checkCard = function(card, result) {
             if (card.length == 18 && card != "") {
-                result.card = true;
-            } else {
-                result.card = false;
+                result.card = "ok"
+            } else if(card == ""){
+                result.card = "nothing";
+            }else if(card.length!=18){
+                result.card = "lengthWrong-card";
             }
         }
         var checkMobile = function(mobile, result) {
-            if (mobile.length == 18 && card != "") {
-                result.mobile = true;
-            } else {
-                result.mobile = false;
+            if (mobile.length == 11 && mobile != "") {
+                result.mobile = "ok";
+            } else if(mobile == ""){
+                result.mobile = "nothing";
+            }else if(mobile.length != 11){
+                result.mobile = "lengthWrong-mobile";
+
             }
         }
-        var mcode = function(mcdoe, result) {
+        var checkCode = function(mcode, result) {
             if (mcode != "") {
-                result.mcode = true;
+                result.mcode = "ok";
             } else {
-                result.mcode = false;
+                result.mcode = "nothing";
             }
         }
         var check = function(obj, result) {
@@ -111,7 +121,7 @@
                         checkMobile(obj[i].value, result);
                         break;
                     case "mcode":
-                        mcode(obj[i].value, result);
+                        checkCode(obj[i].value, result);
                         break;
                 }
             }
@@ -138,16 +148,30 @@
                 }, 1000)
             }
         });
-
+        var verifyWrong = function(msg){
+            $(".verify").html(msg).show();
+        }
+        var verifyPass = function(){
+            $(".verify").html("").hide()
+        }
         //点击提交数据
         $(".greenbutton").click(function() {
             var postData = $('form').serializeArray();
 
             //这里错误提示的样式还没给出）
             var afterCheckData = check(postData);
-
+            console.log(afterCheckData);
+            for(var key in afterCheckData){
+                switch(afterCheckData[key]){
+                    case "nothing":verifyWrong("信息未填写完整");return;break;
+                    case "lengthWrong-card":verifyWrong("身份证号位数不对，请核对重新输入");return;break;
+                    case "lengthWrong-mobile":verifyWrong("请输入正确的手机号码");return;break;
+                }    
+            }
+            verifyPass();
             // postData是你需要提交的信息，
             // ajax写在这里
+            console.log(1111111);
             console.log(postData);
 
         });

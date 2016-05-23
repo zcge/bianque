@@ -1,0 +1,48 @@
+.tip-title{
+	width: 90%;
+	margin:1rem auto;
+	height: 1.536rem;
+	background-color: #F2F2F2;
+	line-height: 1.536rem;
+	font-size:0.5rem;
+	text-indent: 0.3rem;
+}
+.tip p{
+	width: 90%;
+	margin:1rem auto;
+	font-size:0.5rem;
+	color:#4A4A4A;
+	line-height: 1.5;
+}
+.tip ul{
+	width: 90%;
+	margin:1rem auto;
+	font-size:0.5rem;
+	color:#4A4A4A;
+	line-height: 1.5;
+}
+.table-title{
+	width: 90%;
+	font-size:0.5rem;
+	margin:1rem auto 0 auto;
+	color:#4A4A4A;
+	line-height: 1.5;
+}
+.tip table{
+	width: 90%;
+	margin:0.2rem auto;
+	color:#4A4A4A;
+	font-size:0.5rem;
+	text-align: center;
+	line-height: 1.5;
+}
+.tip table td{
+	padding: 0.2rem;
+	border: 1px solid #979797;
+}
+.tip table .center{
+	text-align: center;
+}
+.tip table .left{
+	text-align: left;
+}
