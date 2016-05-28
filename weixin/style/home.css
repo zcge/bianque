@@ -108,7 +108,7 @@ body {
     line-height: 1.5;
     width: 90%;
     margin: 0.4rem auto;
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     color: #b5b5b5;
 }
 
@@ -149,7 +149,7 @@ body {
     line-height: 1.5;
     width: 90%;
     margin: 0.4rem auto;
-    font-size: 0.45rem;
+    font-size: 0.6rem;
 }
 
 .list {
@@ -214,8 +214,10 @@ body {
 
 .agree-clause {
     font-size: 0.625rem;
+    line-height: 2;
     padding-left: 5%;
     padding-top: 1rem;
+    margin-bottom: 2.6rem;
 }
 
 .agree-clause a {
@@ -329,6 +331,7 @@ body {
 }
 
 .agree-clause .left-box {
+    margin-top: 0.25rem;
     width: 0.4rem;
     height: 0.4rem;
     padding: 3px;
