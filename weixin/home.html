@@ -24,7 +24,9 @@
 </head>
 
 <body>
+    <div class="mengchen"></div>
     <div class="main">
+        
         <!-- 顶部tab按钮 -->
         <ul class="top-tab flex-box">
             <li class="flex-item active">
@@ -340,9 +342,9 @@
                 <li>(2)    本计划接受的加入时年龄范围为出生满28天至60周岁(含)</li>
                 <li>(3)    加入本计划之时身体健康，一年内无重大疾病及相关症状就诊或治疗史。</li>
             </ul>
-            <div class="tip-footer">
+            <!--<div class="tip-footer">
                 <a href="">详情</a>
-            </div>
+            </div>-->
        </div>
         <div class="tip-page tip-1">
            1
@@ -376,9 +378,13 @@
             $(".tip").show();
             $(".tip .active").removeClass('active');
             $(".tip-"+num).addClass('active');
+            $(".mengchen").show();
+            $("body").addClass("ov");
         });
         $(".tip-close-btn").click(function(){
              $(".tip").hide();
+             $(".mengchen").hide();
+             $(".ov").removeClass("ov");
         });
     });
     //     var t = getid("text-slider-box"),
