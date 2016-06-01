@@ -65,6 +65,7 @@ body{
     margin:0 auto;
 }
 .page-compare{
+    line-height: 1;
     background-color:#F0F0F0;
     width:100%;
 }
@@ -260,11 +261,13 @@ body{
     position: fixed;
     bottom:0;
     background-color: #6EC159;
-    height: 1.92rem;
+    height: 2.5rem;
     font-size: 0.768rem;
     text-align: center;
-    line-height: 1.92rem;
+    line-height: 2.5rem;
     color:#fff;
     display: block;
-    border-top:1px solid #f7f7f7;
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    
 }

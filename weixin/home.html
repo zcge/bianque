@@ -22,11 +22,9 @@
     }(window);
     </script>
 </head>
-
-<body>
+<body> 
     <div class="mengchen"></div>
     <div class="main">
-        
         <!-- 顶部tab按钮 -->
         <ul class="top-tab flex-box">
             <li class="flex-item active">
@@ -175,7 +173,7 @@
                             <div class="maintitle">
                                 理赔调查机构
                             </div>
-                            <span class="subtitle">
+                            <span class="subtitle" style="text-algin:right;">
     						中国人寿、太平洋保险等保险公司的合作理赔机构
     					</span>
                         </div>
@@ -217,9 +215,11 @@
             <div class="content">
                 <div class="pa p3">申请互助</div>
                 <div class="pa p4">&gt;</div>
-                <div class="pa p5">专业公司查勘案件</div>
+                <div class="pa p5">查勘案件</div>
+                <div class="pa p11">&gt;</div>
+                <div class="pa p12">公示案件</div>
                 <div class="pa p6">&gt;</div>
-                <div class="pa p7">全平台公示案件</div>
+                <div class="pa p7">会员开始充值</div>
                 <div class="pa p8">&lt;</div>
                 <div class="pa p9">钱款到账</div>
                 <div class="pa p10">
@@ -299,12 +299,11 @@
     </div>
 
     </div>
+     
     <div class="tip">
-       <div class='tip-head'>
-            <div class="tip-close-btn">
-                <img src="images/close.jpg" width="100%" alt="">
-            </div>   
-       </div>
+        <div class="tip-close-btn">
+        <img src="images/close.jpg" width="100%" alt="">
+    </div> 
        <div class="tip-page tip-0 active">
             <div class="tip-title">
                 第一节 计划宗旨
@@ -379,6 +378,8 @@
             $(".tip .active").removeClass('active');
             $(".tip-"+num).addClass('active');
             $(".mengchen").show();
+            var h = $(".tip").height()/2;
+            $(".tip").css("marginTop",-h+"px");
             $("body").addClass("ov");
         });
         $(".tip-close-btn").click(function(){

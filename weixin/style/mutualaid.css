@@ -235,3 +235,11 @@ body {
 .no-info-page{
 	background-color: #fff;
 }
+
+.close-btn{
+    position: absolute;
+    width: 1.8rem;
+    height: 1.8rem;
+    right: -0.2rem;
+    top: -2.0rem;
+}

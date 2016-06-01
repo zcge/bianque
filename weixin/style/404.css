@@ -1,0 +1,28 @@
+.box{
+    width:8.66rem;
+    margin:3.7rem auto 0 auto;
+}
+.center{
+    text-align: center;
+}
+.t1{
+    color:#4A4A4A;
+    font-size: 1.024rem;
+    margin:0.5rem auto 2.73rem;
+    
+}
+.t2{
+     color:#4A4A4A;
+     font-size:0.81rem;
+}
+.back{
+    width: 6.571rem;
+    margin:0.5rem auto;
+    height: 1.792rem;
+    line-height: 1.792rem;
+    color:#fff;
+    font-size:0.81rem;
+    background-color: #6EC159;
+    border-radius:0.8rem;
+    text-align: center;
+}
