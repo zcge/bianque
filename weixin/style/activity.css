@@ -1,5 +1,6 @@
 body{
    background-color: #fff;
+   line-height: 1.5;
 }
 .fl{
     float:left;
@@ -125,4 +126,145 @@ body{
     font-weight: bold;
     line-height: 1.5;
     padding:1rem;
+}
+.h-low{
+    height: 1.2rem;
+}
+.song{
+    padding-top: 1.71rem;
+    padding-bottom: 3.21rem;
+    text-align: center;
+    background-color: #F9F5D3;
+    color:#8B572A;
+}
+.song-acticl{
+    padding-top: 0.3rem;
+    text-align: right;
+    text-indent: 0.5rem;
+}
+.p-text{
+    position: relative;
+}
+.p-text .k{
+    position: absolute;
+    width: 0.64rem;
+    height: 0.64rem;
+}
+.p-text .k1{
+   border-top:1px solid #B77E21;
+   border-left:1px solid #B77E21;
+   top:0.5rem;
+   left:0.5rem;
+}
+.p-text .k2{
+   border-top:1px solid #B77E21;
+   border-right:1px solid #B77E21;
+   top:0.5rem;
+   right:0.5rem;
+}
+.p-text .k3{
+   border-bottom:1px solid #B77E21;
+   border-left:1px solid #B77E21;
+   bottom:0.5rem;
+   left:0.5rem;
+}
+.p-text .k4{
+   border-bottom:1px solid #B77E21;
+   border-right:1px solid #B77E21;
+   bottom:0.5rem;
+   right:0.5rem;
+}
+
+.p-text p{
+    color:#B77E21;
+    width:85%;
+    margin:0 auto;
+    padding:1rem 0;
+}
+.table1{
+    padding:0.5rem 0 1rem 0;
+    background-color: #F9F5D3;
+    position: relative;
+}
+.table1 table{
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+.table1 table td{
+    border:1px solid #B77E21;
+    color:#B77E21;    
+}
+.table1 h2{
+     padding-bottom:0.3rem;
+     color:#B77E21;
+     font-size:0.85rem;
+     text-align: center;
+     position: relative;
+}
+.table1 h2:before{
+    content:"";
+    position: absolute;
+    border-top:1px solid #B77E21;
+    top:0.6rem;
+    left:2rem;
+    width: 4rem;
+    height: 5px;
+}
+.table1 h2:after{
+    content:"";
+    position: absolute;
+    border-top:1px solid #B77E21;
+    top:0.6rem;
+    right:2rem;
+    width: 4rem;
+    height: 5px;
+}
+.tese{
+    
+}
+.tese h2{
+    padding: 0.5rem 0;
+    color:#4a4a4a;
+    font-size: 1rem;
+}
+.content{
+    width:80%;
+    margin:0 auto;
+}  
+.tese-item{
+     font-size:0.85rem;
+    height: 1.5rem;
+    color:#4A4A4A;
+}
+.tese-item i{
+    width: 1rem;
+    display: inline-block;
+    padding-right:0.5rem;
+    vertical-align: middle;
+}
+.tese p{
+    font-size: 0.682rem;
+    padding-bottom: 1rem;
+}
+.groups{
+    margin: 0 auto;
+    width:70%;
+}
+.page-2{
+    padding:1rem 0;
+}
+.greenbutton{
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    bottom:0;
+    background-color: #6EC159;
+    height: 1.92rem;
+    font-size: 0.768rem;
+    text-align: center;
+    line-height: 1.92rem;
+    color:#fff;
+    display: block;
+    border-top:1px solid #f7f7f7;
 }
