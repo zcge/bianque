@@ -243,3 +243,107 @@ body {
     right: -0.2rem;
     top: -2.0rem;
 }
+.tip{
+    z-index: 1000;
+    width: 90%;
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 5%;
+    
+    border-radius:0.5rem;
+    height: 80%;
+    background-color: #fff;
+}
+.tip .tip-page{
+    display: none;
+}
+.tip .active{
+    display: block;
+}
+.tip-head{
+    height: 0.25rem;
+}
+.tip-page{
+    height: auto;
+    overflow-y: scroll;
+}
+.tip-footer{
+    border-radius:0 0 0.5rem 0.5rem;
+    line-height: 1.87rem;
+    font-size: 0.5rem;
+    background-color: #f7f7f7;
+    height: 1.87rem;
+    position: absolute;
+    width: 100%;
+    bottom:0;
+}
+.tip-page{
+   overflow-y: scroll!important;
+       height: 90%;
+
+}
+.tip-0{
+    margin-bottom: 2rem;
+}
+
+.tip-title{
+    width: 90%;
+    margin:1rem auto;
+    height: 1.536rem;
+    background-color: #F2F2F2;
+    line-height: 1.536rem;
+    font-size:0.5rem;
+    text-indent: 0.3rem;
+}
+.tip p{
+    width: 90%;
+    margin:1rem auto;
+    font-size:0.5rem;
+    color:#4A4A4A;
+    line-height: 1.5;
+}
+.tip ul{
+    width: 90%;
+    overflow: hidden;
+    margin:1rem auto;
+    font-size:0.5rem;
+    color:#4A4A4A;
+    line-height: 1.5;
+}
+.table-title{
+    width: 90%;
+    font-size:0.5rem;
+    margin:1rem auto 0 auto;
+    color:#4A4A4A;
+    line-height: 1.5;
+}
+.tip table{
+    width: 90%;
+    margin:0.2rem auto;
+    color:#4A4A4A;
+    font-size:0.5rem;
+    text-align: center;
+    line-height: 1.5;
+}
+.tip table td{
+    padding: 0.2rem;
+    border: 1px solid #979797;
+}
+.tip table .center{
+    text-align: center;
+}
+.tip table .left{
+    text-align: left;
+}
+.tip .last-tip{
+    margin-bottom: 4rem;
+}
+.tip-close-btn{
+    position: absolute;
+    z-index: 1014;
+    width: 2rem;
+    height:2rem;
+    top: -2.2rem;
+    right: 0.5rem;
+}
