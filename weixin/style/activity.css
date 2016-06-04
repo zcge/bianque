@@ -2,6 +2,12 @@ body{
    background-color: #fff;
    line-height: 1.5;
 }
+img{
+ border:0;
+ margin:0;
+ padding: 0;
+ display: block;   
+}
 .fl{
     float:left;
 }
@@ -10,11 +16,21 @@ body{
 }
 .photo-box{
     margin: 0 auto;
-    width: 3.84rem;
-    height: 3.84rem;
+    width: 2.4rem;
+    height: 2.4rem;
     border-radius:50%;
+    border: 0.2rem solid #fff;
     overflow:hidden;
-    margin-top:1.536rem;
+    
+}
+.head-box{
+    left:14%;
+    top: 10.5rem;
+}
+.page-first p{
+    padding-left:0.4rem;
+    padding-top: 0.5rem;
+    font-size:0.6rem;
 }
 .center{
     text-align: center;
@@ -31,6 +47,7 @@ body{
 .t14{
     font-size: 0.597rem;
 }
+
 .t23{
     font-size:1rem;
 }
@@ -94,7 +111,8 @@ body{
     background-color: #FFB96A;
 }
 .green{
-    background-color: #6EC159;
+    /* Rectangle 182 Copy 13: */
+    background-image: linear-gradient(-180deg, #96C93B 7%, #4FB43C 100%);
 }
 .white{
     background-color: #fff;
@@ -133,7 +151,7 @@ body{
 }
 .song{
     padding-top: 1.71rem;
-    padding-bottom: 3.21rem;
+    padding-bottom: 5rem;
     text-align: center;
     background-color: #F9F5D3;
     color:#8B572A;
@@ -256,18 +274,44 @@ body{
     padding:1rem 0;
 }
 .greenbutton{
-    width: 100%;
-    margin: 0 auto;
+    /* Rectangle 405 Copy: */
+    background: #6EC159;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.34);
+    border-radius: 2.5rem;
+    width: 80%;
     position: fixed;
-    bottom:0;
+    left:10%;
+    bottom:2rem;
     background-color: #6EC159;
-    height: 2.5rem;
+    height: 2.2rem;
     font-size: 0.768rem;
     text-align: center;
-    line-height: 2.5rem;
+    line-height: 2.2rem;
     color:#fff;
     display: block;
     -moz-box-shadow: 0 0 5px rgba(0, 0, 0, .3);
     box-shadow: 0 0 5px rgba(0, 0, 0, .3);
     
+}
+.po{
+    position: relative
+}
+.pa{
+    position: absolute;
+}
+.add-t,.no-add-t{
+    text-align: center;
+    width:100%;
+    bottom:0;
+    line-height: 1.5;
+    color:#fff;
+}
+.add-t{
+    color: #8B572A;
+}
+.page-first{
+    width: 100%;
+    padding-bottom:168%;
+    background: url("../images/bg1.png") 0 0 no-repeat;
+    background-size: 100% 100%;
 }
