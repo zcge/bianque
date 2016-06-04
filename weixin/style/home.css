@@ -218,7 +218,17 @@ body {
     line-height: 2;
     padding-left: 5%;
     padding-top: 1rem;
-    margin-bottom: 2.6rem;
+}
+.bottom-text{
+    padding:0.2rem 0;
+    margin-bottom:2.6rem;
+    font-size: 0.6rem;
+    color: #9B9B9B;
+    text-align:center;
+    padding:0.2rem 0;
+    font-size: 0.6rem;
+    color: #9B9B9B;
+    text-align:center;
 }
 
 .agree-clause a {
