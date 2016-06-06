@@ -163,12 +163,12 @@ body {
 }
 
 .bitmap-box {
-    top: 50%;
+   top: 50%;
     left: 50%;
-    margin-top: -6rem;
+    margin-top: -7.3rem;
     margin-left: -5.5rem;
     width: 11rem;
-    height: 12rem;
+    height: 12.6rem;
     background-color: #fff;
     border-radius: 0.3rem;
     z-index: 1100;
@@ -178,7 +178,7 @@ body {
 }
 
 .bitmap-box h2 {
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
     font-size: 0.7rem;
     line-height: 1.5;
     font-weight: bold;
@@ -192,9 +192,8 @@ body {
 }
 
 .code-img {
-    width: 6rem;
-    height: 6rem;
-    margin: 1rem auto;
+    width: 8.2rem;
+    margin: 0.5rem auto;
 }
 
 .arrow {

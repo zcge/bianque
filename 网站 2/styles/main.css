@@ -1,0 +1,99 @@
+*{
+    padding:0;
+    margin:0;
+    border:0;
+    
+}
+
+.head{
+    height: 50px;
+    line-height:50px;
+    pointer-events: auto;
+    color: rgb(103, 182, 83);
+    padding: 8px;
+    display: inline;
+    font-family: "Arial Black", Gadget, sans-serif;
+    letter-spacing: -2px;
+    font-size: 24px;
+    word-wrap: break-word;
+    font-weight: normal;
+    overflow: visible;
+    white-space: nowrap;
+    z-index: 18;
+    transform-origin: 50% 50% 0px;
+}
+.icon-logo{
+    overflow: visible;
+    display: inline-block;
+    z-index: 17;
+    width: 50px;
+    height: 50px;
+   vertical-align: middle;
+}
+.warp{
+   background-color:rgb(103, 181, 82)
+}
+.page{
+   height: 450px;
+   position: relative;
+   width:990px;
+   margin:0 auto;
+}
+.code{
+    position: absolute;
+    width:200px;
+    height: 200px;
+    right:10%;
+    top:80px;
+}
+.code-p{
+    line-height: 1.5;
+    position: absolute;
+    width:250px;
+    color: #fff;
+    font-size:16px;
+    text-align: center;
+    right:10%;
+    margin-right:-25px;
+    top:300px
+}
+.page-p{
+    width: 400px;
+    color:#fff;
+    font-size: 40px;
+    text-align: center;
+    position: absolute;
+    top:160px;
+    line-height: 1.5;
+    left:3%;
+}
+.footer{
+    line-height: 1.5;
+    font-size: 16px;
+    text-align: center;
+    padding-top:10px;
+}
+.poa1{
+    position: absolute;
+    overflow: hidden;
+    height: 450px;
+    width: 700px;
+     
+}
+.poa1 img{
+    display:block;
+    width: 130%;
+    height:130%;
+    position: absolute;
+    top:-15%;
+    left:-5%;
+}
+.rect{
+    position: absolute;
+    top:0;
+    left:0;
+    width:700px;
+    height:450px;
+    /*padding-left:10%;*/
+    background-image: linear-gradient(to right, rgba(154,229, 90, 0.89) , rgba(103, 181, 82,1) ); 
+}
