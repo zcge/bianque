@@ -9,11 +9,12 @@
 }
 .back i{
 	background: url("../images/backicon.png") 0 0 no-repeat;
-	background-size: 100% 100%;
-	width: 0.8rem;
-	height: 0.6rem;
-	display: inline-block;
-	margin-right: 0.3rem;
+    background-size: 100% 100%;
+    width: 0.8rem;
+    height: 0.8rem;
+    display: inline-block;
+    margin-right: 0.3rem;
+    vertical-align: sub;
 }
 .tip-title{
 	width: 90%;

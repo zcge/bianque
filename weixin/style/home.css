@@ -103,7 +103,6 @@ body {
     margin-bottom: 0.8rem;
 }
 
-.photo-box span {}
 
 .head p {
     line-height: 1.5;
@@ -113,9 +112,6 @@ body {
     color: #b5b5b5;
 }
 
-.page {
-  
-}
 
 .statistics-box {
     margin-top: 1rem;
@@ -183,6 +179,16 @@ body {
     vertical-align: -8%;
     display: inline-block;
     margin-left: 0.35rem;
+    width: 0.35rem;
+    height: 0.6rem;
+    background-image: url("../images/icon.jpg");
+    background-size: 100% 100%;
+}
+.tip-title i{
+    float: right;
+    margin-top: 0.4rem;
+    display: inline-block;
+    margin-right: 0.3rem;
     width: 0.35rem;
     height: 0.6rem;
     background-image: url("../images/icon.jpg");
@@ -603,6 +609,9 @@ input{
     color:#4A4A4A;
     line-height: 1.5;
 }
+.tip em{
+    font-weight: bold;
+}
 .tip ul{
     width: 90%;
     overflow: hidden;
@@ -939,9 +948,6 @@ input{
 	overflow: hidden;
 }
 
-#scroller {
-	
-}
 
 #scroller ul {
 	list-style: none;

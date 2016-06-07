@@ -4,40 +4,47 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
-	<link rel="stylesheet" href="./styles/main.css">
+	<link rel="stylesheet" href="./styles/pc_moblie.css">
 	<title>官方网站</title>
-	
-
-
 	<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-width" />
+	<script>
+		!function () {
+            function a() {
+				if(document.documentElement.clientWidth<=750){
+					document.documentElement.style.fontSize = document.documentElement.clientWidth / 16 + "px"
+				}
+                
+            }
 
-	<!-- end copy -->
+            var b = null;
+            window.addEventListener("resize", function () {
+                clearTimeout(b);
+				b = setTimeout(a, 300)
+            }, !1), a()
+        }(window);
+	</script>
 </head>
 
 <body>
-
 	<div>
 		<div class="head">
 			<i class="icon-logo">
 				<img src="./images/logo2.png"  width="100%"  alt="">
-			</i>
-			扁鹊兄弟互助
+			</i> 扁鹊兄弟互助
 		</div>
 		<div class="content">
-			
-		
-		<div class="poa1">
-			<img src="./images/is09al9av.jpg" alt="">
-			<div class="rect">
-				
+			<div class="poa1">
+				<img src="./images/is09al9av.jpg" alt="">
+				<div class="rect">
+
+				</div>
 			</div>
 		</div>
-		</div>
 		<div class="warp">
-			
 			<div class="page">
 				<p class="page-p">
-					让每个会员都有钱看病
+					<span class="p-t1">让每个会员</span>
+					<span class="p-t2">都有钱看病</span>
 				</p>
 				<div class="code">
 					<img src="./images/icon.jpg" width="100%" alt="">
