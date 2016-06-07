@@ -554,12 +554,15 @@ input{
     width: 90%;
     display: none;
     position: fixed;
-    top: 10%;
+    top: 13%;
     left: 5%;
-    
     border-radius:0.5rem;
     height: 80%;
     background-color: #fff;
+}
+.tip2{
+    height: 50%!important;
+    top:25%!important;
 }
 .tip .tip-page{
     display: none;
@@ -586,7 +589,7 @@ input{
 }
 .tip-page{
    overflow-y: scroll!important;
-       height: 90%;
+   height: 98%;
 
 }
 .tip-0{

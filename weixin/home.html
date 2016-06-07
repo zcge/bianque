@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./style/home.css">
     <link rel="stylesheet" href="http://res.xiongdihuzhu.com/res/weixin/style/base.css">
     <link rel="stylesheet" href="http://res.xiongdihuzhu.com/res/weixin/style/tip.css">
-    <link rel="stylesheet" href="http://res.xiongdihuzhu.com/res/weixin/style/mutualaid.css">
+    <link rel="stylesheet" href="./style/mutualaid.css">
     <script src="./js/iscroll.js"></script>
     <script src="http://res.xiongdihuzhu.com/res/weixin/js/zepto.js"></script>
     <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
@@ -695,16 +695,6 @@
                 8. 核爆炸、核辐射或者核污染；</br>
             </p>
         </div>
-        <div class="tip-page tip-3">
-            <div class="tip-title">
-                等待期
-            </div>
-            <p>
-                1. 会员从加入平台开始计算180天后，开始享有发生重大疾病可以申请理赔的权利。</br>
-                2. 设置等待期的原因：为了保护会员的利益，预防一些会员带病参加互助，恶意获取互助金。
-            </p>
-
-        </div>
         <div class="tip-page tip-4">
             <div class="tip-title">
                 会员退出
@@ -726,20 +716,40 @@
             </p>
         </div>
         </div>
-
     </div>
+    <div class="tip tip2">      
+       <div class='tip-head'>
+            <div class="tip-close-btn">
+                <img src="http://res.xiongdihuzhu.com/res/weixin/images/x.png" width="100%" alt="">
+            </div>
+        </div>
+       
+        <div class="tip-page tip-3">
+            <div class="tip-title">
+                等待期
+            </div>
+            <p>
+                1. 会员从加入平台开始计算180天后，开始享有发生重大疾病可以申请理赔的权利。</br>
+                2. 设置等待期的原因：为了保护会员的利益，预防一些会员带病参加互助，恶意获取互助金。
+            </p>
 
+        </div>
+        
+        </div>
+    </div>
 
 
     <script>
         Zepto(function ($) {
         $(".click-li").click(function(){
+            
             var num = $(this).attr("data-li-num");
             var statYm = $(this).attr("data-statistics-ym");
             _czc.push(["_trackEvent",'重疾详情',statYm,channelId+'_'+shareTextId,'','']);
-            $(".tip").show();
+            $(".tip").hide();
             $(".tip .active").removeClass('active');
-            $(".tip-"+num).addClass('active');
+            $(".tip-"+num).parent().show();
+             $(".tip-"+num).addClass("active");
             // var h = $(".tip").height()/2;
             // console.log(h);
             // var fs = document.documentElement.clientWidth / 16;
@@ -749,13 +759,11 @@
             // },0)
             // $(".tip").css("marginTop",-h+"px");
             
-            $(".mengchen").show();
-            $("body").addClass("ov");
+            $(".mengchen").show(); 
         });
         $(".tip-close-btn").click(function(){
             $(".tip").hide();
             $(".mengchen").hide();
-            $(".ov").removeClass("ov");
         });
         var t = getid("text-slider-box"),
                 t1 = getid("text-slider-text"),
