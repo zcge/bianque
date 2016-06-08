@@ -14,7 +14,11 @@
     <script>
     ! function() {
         function a() {
-            document.documentElement.style.fontSize = document.documentElement.clientWidth / 16 + "px"
+            var num = document.documentElement.clientWidth / 16;
+            if(document.documentElement.clientWidth>=800){
+                num = 50;
+            }
+            document.documentElement.style.fontSize =  num + "px"
         }
         var b = null;
         window.addEventListener("resize", function() {
