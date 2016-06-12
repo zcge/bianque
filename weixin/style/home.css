@@ -396,8 +396,10 @@ body {
  */
 
 .head {
+    
     position: relative;
     padding-top: 1.2rem;
+        top: -0.9rem;
 }
 
 
@@ -917,6 +919,7 @@ input{
     width:70%;
 }
 .page-pd1{
+    margin-top: -0.5rem;
     padding:1rem 0;
     border-bottom: 0.25rem solid #f7f7f7;
 }

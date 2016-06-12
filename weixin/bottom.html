@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>底部浮层</title>
+    <link rel="stylesheet" href="./style/base.css">
+    <style>
+        .bottom-fixed{
+            /*height: 6rem;*/
+
+            /*opacity: 0.5;*/
+            background-color:rgba(0,0,0,0.5);
+            position: fixed;
+            bottom:0;
+            padding: 0.5rem 0rem;
+            width:100%;
+        }
+        .bottom-img{
+            width:2rem;
+            height: 2rem;
+            overflow: hidden;
+            float:left;
+            margin-left:5%;
+        }
+        .bottom-btn{
+            background-color:#5AD143 ;
+            float:right;
+            color:#fff;
+            text-align: center;
+            font-size: 0.8rem;
+             margin-right:5%;
+             height: 1.8rem;
+             line-height:1.8rem;
+             padding:0.1rem 0.5rem;
+             border-radius:0.3rem;
+        }
+        .bottom-text{
+            padding-left: 0.5rem;
+            font-size: 0.8rem;
+            color: #fff;
+        }
+        .bottom-text h2{
+            font-size:0.8rem;
+            line-height: 1.5;
+        }
+        .bottom-text span{
+            font-size:0.7rem;
+        }
+        .fl{
+            float:left;
+        }
+    </style>
+    <script>
+        !function() {
+            function a() {
+                document.documentElement.style.fontSize = document.documentElement.clientWidth / 16 + "px"
+            }
+            var b = null;
+            window.addEventListener("resize", function() {
+                clearTimeout(b), b = setTimeout(a, 300)
+            }, !1), a()
+        }(window);
+    </script>
+</head>
+<body>
+    <div class="bottom-fixed clearfix">
+        <div class="bottom-img fl">
+             <img src="./images/photo.jpg" width="100%" alt="">
+        </div>
+        <div class="bottom-text fl">
+            <h2>天机疏远</h2>
+            <span>kkkk</span>
+        </div>
+        <div class="bottom-btn">点击查看</div>
+    </div>
+</body>
+</html>
