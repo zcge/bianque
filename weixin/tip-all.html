@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>扁鹊兄弟互助计划</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="./style/base.css">
+    <link rel="stylesheet" href="./style/tip.css">
+    <script src="./js/zepto.js"></script>
+    <script>
+    ! function() {
+        function a() {
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 16 + "px"
+        }
+        var b = null;
+        window.addEventListener("resize", function() {
+            clearTimeout(b), b = setTimeout(a, 300)
+        }, !1), a()
+    }(window);
+    </script>
+</head>
+<style>
+	.tip-box-ok{
+		height: 8.82rem;
+		width:11rem;
+		position: fixed;
+		top:50%;
+		left:50%;
+		border-radius: 1rem;
+		margin-top:-4.41rem;
+		margin-left:-5.5rem;
+		background-color: rgba(0,0,0,0.7);
+	}
+	.tip-box-ok .box-img-ok{
+		width:3.54rem;
+		margin: 1.5rem auto 0.5rem auto;
+	}
+	.tip-box-ok h2{
+		color:#fff;
+		font-size: 1rem;
+		text-align: center;
+	}
+
+</style>
+<body>
+	<div class="tip-box-ok">
+		<div class="box-img-ok">
+			<img src="../weixin/images/ok-circle.png" width="100%" alt="">
+		</div>
+		<h2>加入成功!</h2>
+	</div>
+</body>
+</html>

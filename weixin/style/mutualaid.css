@@ -1,6 +1,14 @@
 body {
     background-color: #f7f7f7;
 }
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_1466226404_8207135.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1466226404_8207135.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1466226404_8207135.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1466226404_8207135.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1466226404_8207135.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
 
 .fl {
     float: left;
@@ -161,14 +169,27 @@ body {
     z-index: 1000;
     display: none;
 }
-
+.bitmap-box .title{
+    color:#6EC159;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    margin: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom:1px dashed #6EC159;
+}
+.bitmap-box .ok-img{
+    vertical-align: middle;
+    display: inline-block;
+    width:1rem;
+    height:1rem;
+}
 .bitmap-box {
    top: 50%;
     left: 50%;
     margin-top: -7.3rem;
     margin-left: -5.5rem;
     width: 11rem;
-    height: 12.6rem;
+    height: 14rem;
     background-color: #fff;
     border-radius: 0.3rem;
     z-index: 1100;
@@ -346,3 +367,29 @@ body {
     top: -2.2rem;
     right: 0.5rem;
 }
+/*已经加入样式*/
+.tip-box-ok{
+    height: 8.82rem;
+    width:11rem;
+    position: fixed;
+    top:50%;
+    left:50%;
+    border-radius: 1rem;
+    margin-top:-4.41rem;
+    margin-left:-5.5rem;
+    background-color: rgba(0,0,0,0.6);
+}
+.tip-box-ok .box-img-ok{
+    width:3.54rem;
+    margin: 1.8rem auto 0.5rem auto;
+}
+.tip-box-ok h2{
+    color:#fff;
+    font-size: 1rem;
+    text-align: center;
+}
+.inconfont{
+    font-family:'iconfont';
+    color:red;
+}
+

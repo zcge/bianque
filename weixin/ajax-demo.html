@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>扁鹊兄弟互助计划</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="./style/base.css">
+    <link rel="stylesheet" href="./style/404.css">
+    <script src="./js/zepto.js"></script>
+</head>
+
+<body>
+   <script>
+        
+            var ajax = {
+                get:function(url,obj,success,fail){
+                    obj = obj || {};
+                    obj.url = location.href;
+                    Zepto.ajax({
+                        'type':"GET",
+                        'url':url,
+                        'data':obj,
+                        'timeout':30000,
+                        'dataType':"json",
+                        'context': $('body'),
+                        'success':function(data){
+                            success && success(data);
+                        },
+                        'error':function(xhr, errorType, error){
+                            fail && fail(error,xhr,errorType);
+                        }
+
+                    });
+                },
+
+            };
+
+            Zepto(function($) {
+                 $.ajax({
+                          dataType: 'jsonp',
+                          url: 'http://tce.alicdn.com/api/data.htm?ids=306798',
+                          cache: true, //为了cache缓存生效，减少cdn回源
+                          jsonpCallback: 'tce_306798', //固定函数名，命中缓存
+                          success: function (data) {
+                            console.log(data);
+                          }});
+                // ajax.get("http://www.abc.com/json.php",function(d){
+                //     console.log(d);
+                // })
+            });   
+
+
+        
+   </script>
+</body>
+
+</html>

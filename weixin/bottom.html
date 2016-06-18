@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>底部浮层</title>
-    <link rel="stylesheet" href="./style/base.css">
+    <!--<link rel="stylesheet" href="./style/base.css">-->
     <style>
+         *{
+            padding: 0;
+            margin:0;
+            border:0;
+        }
         .bottom-fixed{
-            /*height: 6rem;*/
-
+            
             /*opacity: 0.5;*/
             background-color:rgba(0,0,0,0.5);
             position: fixed;
@@ -67,18 +71,19 @@
         }
         .head h1{
             font-weight: bold;
-            font-size:0.8rem;
+            font-size:1rem;
             padding-bottom: 0.3rem;
-            border-bottom: 1px solid #333333;
+            border-bottom: 1px solid #EAEAEA;
         }
         .head p{
             padding-top: 0.3rem;
-            font-size: 0.6rem;
+            font-size: 0.7rem;
             color:#333333;
         }
         .head a{
             color:#6b88ac;
         }
+       
     </style>
     <script>
         !function() {

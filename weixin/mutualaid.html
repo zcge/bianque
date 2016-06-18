@@ -9,14 +9,16 @@
         _czc.push(["_setAccount", "1259101635"]);
     </script>
     <meta charset="UTF-8">
-    <title>扁鹊兄弟互助计划</title>
+    <title>扁鹊兄弟互助</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="keywords" content=“扁鹊兄弟互助平台,扁鹊兄弟,网络互助平台,兄弟互助,互助平台,网络互助,网络保障平台,网络保障” />
+    <meta name="description" content=“扁鹊兄弟互助平台,更低互助金,更高更公平的可信赖的保障” />
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
     <meta content="telephone=no" name="format-detection">
     <link rel="stylesheet" href="http://res.xiongdihuzhu.com/res/weixin/style/base.css">
     <link rel="stylesheet" href="./style/mutualaid.css">
-    <script src="http://res.xiongdihuzhu.com/res/weixin/js/zepto.js"></script>
+    <script src="http://res.xiongdihuzhu.com/res/weixin/js/zepto-min.js"></script>
     <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script>
         ! function() {
@@ -30,16 +32,19 @@
         }(window);
     </script>
     <script>
-        var channelId='渠道'+2;
-    var shareTextId='文案'+3;
-       // _czc.push(["_trackEvent",'重疾互助_'+channelId,'点连接','点连接','','']);
+        var channelId='渠道'+1;
+        var shareTextId='文案'+1;
+        var lurkDesc=channelId+'_'+shareTextId;
+        _czc.push(["_trackEvent",'我的互助','访问',lurkDesc,'','']);
+        // _czc.push(["_trackEvent",'重疾互助_'+channelId,'点连接','点连接','','']);
+            
     </script>
     <script>
         wx.config({
                         appId: 'wxfbd4aebb3461f2f6',
-            timestamp:1465026222 ,
-            nonceStr: '11b89199-8ab2-40bc-acfb-609fdcd99400',
-            signature: '7fbfd5de0aa9c6746765c9536d71a3f420c05a5e',
+            timestamp:1466226196 ,
+            nonceStr: '4d5516b2-eb9d-4744-a84b-41a2ce67207b',
+            signature: 'e340bb1d904941f5d417211ff388420f2068db4c',
             jsApiList: [
                 /*
                  * 所有要调用的 API 都要加到这个列表中
@@ -51,21 +56,21 @@
         });
         wx.ready(function () {
             wx.onMenuShareTimeline({
-                title: '看不起病?来这里免费领取30万保证金',
-                link: 'http://www.xiongdihuzhu.com/activity/ali.htm?activityId=1&channelId=2&shareTextId=3&shareUserId=53&shareLevel=1&f=t',
+                title: '我强烈推荐你0元加入扁鹊兄弟互助，一起享30万保障',
+                link: 'http://www.xiongdihuzhu.com/concur/detail.htm?activityId=1&channelId=1&shareTextId=1&shareUserId=67&shareLevel=1&f=t',
                 imgUrl: 'http://wx.qlogo.cn/mmopen/DD5jeVEXW51qBOFMEMOmZp0F8UZg6zacuhm4JUENjZicx44SpzK01zeapfhzIBR8I3S6eYxC2CsHtPHg9UHLOf2SzyEuZ2hSd/0',
                 trigger: function (res) {
                     //alert('用户点击分享到朋友圈');
                 },
                 success: function (res) {
                     //alert('已分享');
-                    _czc.push(["_trackEvent",'我的互助','分享朋友圈',channelId+'_'+shareTextId,'','invite']);
+                    _czc.push(["_trackEvent",'我的互助','分享朋友圈',lurkDesc,'','invite']);
 
                     Zepto.ajax({
                         type: 'GET',
                         url: '/myconcur/share.htm',
                         // data to be added to query string:
-                        data: {activityId:1,shareUserId:53, channelId:2,shareTextId:3,level:1,f:'t'},
+                        data: {activityId:1,shareUserId:67, channelId:1,shareTextId:1,level:1,f:'t'},
                         // type of data we are expecting in return:
                         dataType: 'json',
                         timeout: 3000,
@@ -78,7 +83,8 @@
                             console.error(data);
                         }
                     });
-                    
+
+
                 },
                 cancel: function (res) {
                     //alert('已取消');
@@ -90,21 +96,21 @@
             });
 
             wx.onMenuShareAppMessage({
-                title: '看不起病?来这里免费领取30万保证金', // 分享标题
-                desc: '得了癌症没钱看病,是一种什么体验', // 分享描述
-                link: 'http://www.xiongdihuzhu.com/activity/ali.htm?activityId=1&channelId=2&shareTextId=3&shareUserId=53&shareLevel=1&f=a', // 分享链接
+                title: '我强烈推荐你0元加入扁鹊兄弟互助，一起享30万保障', // 分享标题
+                desc: '这个重大疾病互助平台很有意思，很靠谱，当人数越多，大家的保障更加稳定，值得信赖！', // 分享描述
+                link: 'http://www.xiongdihuzhu.com/concur/detail.htm?activityId=1&channelId=1&shareTextId=1&shareUserId=67&shareLevel=1&f=a', // 分享链接
                 imgUrl: 'http://wx.qlogo.cn/mmopen/DD5jeVEXW51qBOFMEMOmZp0F8UZg6zacuhm4JUENjZicx44SpzK01zeapfhzIBR8I3S6eYxC2CsHtPHg9UHLOf2SzyEuZ2hSd/0', // 分享图标
                 type: 'link', // 分享类型,music、video或link，不填默认为link
                 dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
                 success: function () {
                     //alert('已分享');
-                    _czc.push(["_trackEvent",'我的互助','分享给朋友',channelId+'_'+shareTextId,'','invite']);
+                    _czc.push(["_trackEvent",'我的互助','分享给朋友',lurkDesc,'','invite']);
 
                     Zepto.ajax({
                         type: 'GET',
                         url: '/myconcur/share.htm',
                         // data to be added to query string:
-                        data: {activityId:1,shareUserId:53, channelId:2,shareTextId:3,level:1,f:'a'},
+                        data: {activityId:1,shareUserId:67, channelId:1,shareTextId:1,level:1,f:'a'},
                         // type of data we are expecting in return:
                         dataType: 'json',
                         timeout: 3000,
@@ -117,6 +123,7 @@
                             console.error(data);
                         }
                     });
+                                            //openCode();
                     
                 },
                 cancel: function () {
@@ -127,74 +134,86 @@
     </script>
 
 </head>
-
-<body>
-    <div style="display:none">
-        <script src="http://s95.cnzz.com/z_stat.php?id=1259101635&web_id=1259101635" language="JavaScript"></script>
+<body >
+<div class="tip-box-ok">
+        <div class="box-img-ok">
+            <img src="../weixin/images/ok-circle.png" width="100%" alt="">
+        </div>
+        <h2>加入成功!</h2>
     </div>
+<div class="mengchen" ></div>
+<div style="display:none">
+    <script src="http://s95.cnzz.com/z_stat.php?id=1259101635&web_id=1259101635" language="JavaScript"></script>
+</div>
 
-    <div class="mask"></div>
-    <div class="arrow">
-        <img src="http://res.xiongdihuzhu.com/res/weixin/images/a.png" width="100%" alt="">
-    </div>
+<div class="mask"></div>
+<div class="arrow">
+    <img src="http://res.xiongdihuzhu.com/res/weixin/images/jiantou.png" width="100%" alt="">
+</div>
     <!-- 顶部tab按钮 -->
-    <div>
-        <ul class="top-tab flex-box">
-            <li class="flex-item">
-                <a href="http://www.xiongdihuzhu.com/concur/detail.htm" class="a-fill">互助计划</a>
-            </li>
-            <li class="flex-item active">
-                <a href="http://www.xiongdihuzhu.com/myconcur/index.htm" class="a-fill">我的互助</a>
-            </li>
-        </ul>
-
+<div >
+    <ul class="top-tab flex-box">
+        <li class="flex-item">
+            <a href="http://www.xiongdihuzhu.com/concur/detail.htm?1=1" class="a-fill">互助计划</a>
+        </li>
+        <li class="flex-item active">
+            <a href="http://www.xiongdihuzhu.com/myconcur/index.htm?1=1" class="a-fill">我的互助</a>
+        </li>
+    </ul>
+    	<div class="mask2"></div>
+    <div class="bitmap-box">
+    	<div class="title"><img class="ok-img" src="./images/green-ok.png"/>&nbsp;加入成功!</div>
+        <div class="close-btn"><img src="http://res.xiongdihuzhu.com/res/weixin/images/x.png" width="100%" /></div>
+        <h2>长按识别二维码关注</h2>
+        <h3>可领取1000元额外保额</h3>
+        <div class="code-img">
+            <img src="http://res.xiongdihuzhu.com/res/images/bqxdhzewm.png"  width="100%" alt="">
+        </div>
+    </div>
         <div class="head-panel">
             <h2>黄建飞</h2>
-            <h3>等待期:5/180天</h3>
+                        <h3 class="click-li" data-li-num="4" data-statistics-ym="等待期点击">等待期还剩167天（至2016-12-03）</h3>
             <div class="text-box flex-box">
                 <div class="right-text flex-item">
-                    <h2 class="click-li" data-li-num="0">311050</h2>
-                    <h3>成功理赔可获互助金</h3>
+                    <h2 class="click-li" data-li-num="0"
+                        data-statistics-ym="保障点击">311130</h2>
+                    <h3>最高可获互助金</h3>
                 </div>
-                <div class="left-text flex-item">
-                    <h2 class="click-li" data-li-num="1">+10</h2>
+                <div class="left-text flex-item" >
+                    <h2 class="click-li" data-li-num="0" data-statistics-ym="今日增额点击">+10</h2>
                     <h3>今日增额</h3>
                 </div>
             </div>
         </div>
         <div class="panel-1 flex-box">
             <div class="flex-item">
-                <h2 class="click-li" data-li-num="2">35</h2>
+                <h2 >35</h2>
                 <h3>年龄</h3>
             </div>
             <div class="flex-item">
-                <h2 class="click-li" data-li-num="3">1</h2>
+                <h2 class="click-li" data-li-num="1" data-statistics-ym="分摊点击">1</h2>
                 <h3>分摊系数</h3>
             </div>
             <div class="flex-item">
-                <h2 class="click-li" data-li-num="4">3</h2>
-                <h3>速算分摊金额</h3>
+                <h2 class="click-li" data-li-num="1" data-statistics-ym="每次最多分摊">3</h2>
+                <h3>每次最多分摊（元）</h3>
             </div>
         </div>
-        <div class="panel-2 flex-box">
+        <div  class="panel-2 flex-box" >
             <div class="left-box flex-item clearfix">
                 <div class="fl img-box">
                     <img src="http://res.xiongdihuzhu.com/res/images/firstgroup.jpg" width="100%" alt="头像">
                 </div>
-                <div class="fl">
-                    <h3>橙色.互助小组</h3>
-                    <h4>已加入</h4>
+                <div class="fl" style="height:35px;line-height:35px;">
+                    <h3>重大疾病互助计划</h3>
+                    <!--h4>橙色.互助小组</h4 -->
                 </div>
 
             </div>
             <div class="right-box flex-item">
                 <div class="flex-box">
-                    <div class="flex-item">
-                        <h2>4</h2>
-                        <h3>本小组人数</h3>
-                    </div>
-                    <div class="flex-item">
-                        <h2>4</h2>
+                                        <div class="flex-item">
+                        <h2>1197</h2>
                         <h3>计划总人数</h3>
                     </div>
                 </div>
@@ -203,15 +222,15 @@
     </div>
     <div class="footer">
         <h3>
-        邀请好友加入，互助金额立增1000!!
-    </h3>
+            邀请一位朋友加入，保障增加1000元（限10位）
+        </h3>
         <h4>
-        还送好友1万元保额礼
-    </h4>
+            朋友可多得1万元额外保障
+        </h4>
         <div class="btn goInvitation" id="invite">马上邀请</div>
     </div>
-    <div class="tip">      
-       <div class='tip-head'>
+    <div class="tip">
+        <div class='tip-head'>
             <div class="tip-close-btn">
                 <img src="http://res.xiongdihuzhu.com/res/weixin/images/x.png" width="100%" alt="">
             </div>
@@ -221,175 +240,123 @@
                 重疾保障额度
             </div>
             <p>重疾保障额度=基础额度+奖励额度+每日增长额度</p>
-            <div class="table-title">基础额度</div>
+            <div class="table-title" style="font-weight: bold">基础额度</div>
             <table>
                 <tbody>
-                    <tr>
-                        <td width="40%" class="left">年龄</td>
-                        <td>重大疾病</td>
-                        <td>特定重大疾病</td>
-                    </tr>
-                    <tr>
-                        <td width="40%" class="left">出生30天-50周岁</td>
-                        <td>30万元</td>
-                        <td>5万元</td>
-                    </tr>
-                    <tr>
-                        <td width="40%" class="left">50-80岁</td>
-                        <td colspan="2">用户参加互助捐助额度的3倍</td>
-                    </tr>
+                <tr>
+                    <td width="40%" class="left">年龄</td>
+                    <td>重大疾病</td>
+                    <td>特定重大疾病</td>
+                </tr>
+                <tr>
+                    <td width="40%" class="left">出生30天-50周岁</td>
+                    <td>30万元</td>
+                    <td>5万元</td>
+                </tr>
+                <!--<tr>
+                    <td width="40%" class="left">50-80岁</td>
+                    <td colspan="2">用户参加互助捐助额度的3倍</td>
+                </tr>-->
 
                 </tbody>
             </table>
-            <table>
-                <tbody>
-                    <tr>
-                        <td width="40%" class="left">年龄</td>
-                        <td>重大疾病</td>
-                        <td>特定重大疾病</td>
-                    </tr>
-                    <tr>
-                        <td width="40%" class="left">出生30天-50周岁</td>
-                        <td>30万元</td>
-                        <td>5万元</td>
-                    </tr>
-                    <tr>
-                        <td width="40%" class="left">50-80岁</td>
-                        <td colspan="2">用户参加互助捐助额度的3倍</td>
-                    </tr>
 
-                </tbody>
-            </table>
+            <div class="table-title" style="font-weight: bold">奖励额度</div>
             <table>
                 <tbody>
-                    <tr>
-                        <td width="40%" class="left">年龄</td>
-                        <td>重大疾病</td>
-                        <td>特定重大疾病</td>
-                    </tr>
-                    <tr>
-                        <td width="40%" class="left">出生30天-50周岁</td>
-                        <td>30万元</td>
-                        <td>5万元</td>
-                    </tr>
-                    <tr>
-                        <td width="40%" class="left">50-80岁</td>
-                        <td colspan="2">用户参加互助捐助额度的3倍</td>
-                    </tr>
-
+                <tr>
+                    <td width="40%" class="left">奖励事项</td>
+                    <td>奖励保障额度</td>
+                </tr>
+                <tr>
+                    <td width="40%" class="left">每邀请一个朋友加入</td>
+                    <td>1000元</td>
+                </tr>
+                <tr>
+                    <td width="40%" class="left">朋友接受邀请加入</td>
+                    <td>朋友获得1万元额度</td>
+                </tr>
+                <tr>
+                    <td width="40%" class="left">关注公众号</td>
+                    <td>1000元</td>
+                </tr>
                 </tbody>
             </table>
+            <div class="table-title" style="font-weight: bold">保额每日增长，不怕10年后看病钱不够用</div>
             <table>
                 <tbody>
-                    <tr>
-                        <td width="40%" class="left">年龄</td>
-                        <td>重大疾病</td>
-                        <td>特定重大疾病</td>
-                    </tr>
-                    <tr>
-                        <td width="40%" class="left">出生30天-50周岁</td>
-                        <td>30万元</td>
-                        <td>5万元</td>
-                    </tr>
-                    <tr>
-                        <td width="40%" class="left">50-80岁</td>
-                        <td colspan="2">用户参加互助捐助额度的3倍</td>
-                    </tr>
-
-                </tbody>
-            </table>
-            <div class="table-title">奖励额度</div>
-            <table>
-                <tbody>
-                    <tr>
-                        <td width="40%" class="left">奖励事项</td>
-                        <td>奖励保障额度</td>
-                    </tr>
-                    <tr>
-                        <td width="40%" class="left">每邀请一个朋友加入</td>
-                        <td>1000元</td>
-                    </tr>
-                    <tr>
-                        <td width="40%" class="left">朋友接受邀请加入</td>
-                        <td>朋友获得1万元额度</td>
-                    </tr>
-                    <tr>
-                        <td width="40%" class="left">关注公众号</td>
-                        <td>1000元</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="table-title">保额每日增长，不怕10年后看病钱不够用</div>
-            <table>
-                <tbody>
-                    <tr>
-                        <td width="40%" class="left">每日增长</td>
-                        <td>10元</td>
-                    </tr>
+                <tr>
+                    <td width="40%" class="left">每日增长</td>
+                    <td>10元</td>
+                </tr>
 
 
                 </tbody>
             </table>
 
-            <div class="tip-footer">
-                <a href="http://res.xiongdihuzhu.com/res/static/article.html#zdjb">50种</a>
-            </div>
+            <a href="http://res.xiongdihuzhu.com/res/static/article.html#zdjb"><div class="tip-title clearfix">50种重大疾病详情<i></i></div></a>
         </div>
+
         <div class="tip-page tip-1">
             <div class="tip-title">
                 分摊系数计算
             </div>
             <table>
                 <tbody>
-                    <tr>
-                        <td width="40%" class="left">周岁（含）</td>
-                        <td>扣费系数</td>
-                        <td>单次扣费上限</td>
-                    </tr>
-                    <tr>
-                        <td width="40%" class="left">出生满30天-18周岁</td>
-                        <td>0.5</td>
-                        <td>1.5元</td>
-                    </tr>
-                    <tr>
-                        <td width="40%" class="left">18-35</td>
-                        <td>1</td>
-                        <td>3元</td>
-                    </tr>
-                    <tr>
-                        <td width="40%" class="left">36-50周岁</td>
-                        <td>2</td>
-                        <td>6元</td>
-                    </tr>
-                    <tr>
-                        <td width="40%" class="left">50-80周岁以上</td>
-                        <td>不扣费</td>
-                        <td>不扣费</td>
-                    </tr>
+                <tr>
+                    <td width="40%" class="left">周岁（含）</td>
+                    <td>扣费系数</td>
+                    <td>单次扣费上限</td>
+                </tr>
+                <tr>
+                    <td width="40%" class="left">出生满30天-18周岁</td>
+                    <td>0.5</td>
+                    <td>1.5元</td>
+                </tr>
+                <tr>
+                    <td width="40%" class="left">18-35</td>
+                    <td>1</td>
+                    <td>3元</td>
+                </tr>
+                <tr>
+                    <td width="40%" class="left">36-50周岁</td>
+                    <td>2</td>
+                    <td>6元</td>
+                </tr>
+                <tr>
+                    <td width="40%" class="left">50-80周岁以上</td>
+                    <td>不扣费</td>
+                    <td>不扣费</td>
+                </tr>
                 </tbody>
             </table>
             <p>
                 注：计划成员越多每次均摊额越少</br>
-                计算公式：</br>
+                <em>计算公式：</em></br>
                 自己支付的互助金= 自己互助系数/该计划全体成员总系数之和*受助会员互助金额
             </p>
         </div>
-        <div class="tip-page tip-2">
+
+    </div>
+
+    <div class="tip tip2">
+        <div class='tip-head'>
+            <div class="tip-close-btn">
+                <img src="http://res.xiongdihuzhu.com/res/weixin/images/x.png" width="100%" alt="">
+            </div>
+        </div>
+
+        <div class="tip-page tip-3">
             <div class="tip-title">
-                不予互助事项
+                计划与小组
             </div>
             <p>
-                1. 会员未获得或已丧失会员资格的；</br>
-                2. 会员在加入平台时，或在审核调查过程提供虚假信息（含虚假联系方式），刻意隐瞒事实或未履行如实告知义务的；</br>
-                3. 会员在加入平台时或加入后的观察期内已患有癌症或有其他重大疾病史（中国保险行业协会与中国医师协会共同制定《重大疾病保险的疾病定义使用规范》）；</br>
-                4. 会员在观察期满以后确诊罹患癌症等重大疾病，但是在观察期内已经通过其他任何诊断手段发现疑似，或者已经开始实施针对治疗或导致“重大疾病”的相关疾病就诊；</br>
-                5. 会员吸食或者注射毒品；</br>
-                6. 会员有遗传性疾病，先天性畸形、变形或染色体异常；</br>
-                7. 会员感染艾滋病病毒或患艾滋病；</br>
-                8. 核爆炸、核辐射或者核污染；</br>
+                1. 计划由多个小组构成，小组成员发生意外后，由整个计划所有成员进行分摊。</br>
+                2. 单一小组成员超过10万人以后，可以申请单独成立一个保障计划，并可制定专门的保障条款。</br>
+                3. 一个会员在一个计划中，仅能参加一个小组，可在多个小组中切换。</br>
             </p>
         </div>
-        <div class="tip-page tip-3">
+        <div class="tip-page tip-4">
             <div class="tip-title">
                 等待期
             </div>
@@ -399,55 +366,58 @@
             </p>
 
         </div>
-        <div class="tip-page tip-4">
-            <div class="tip-title">
-                不予互助事项
-            </div>
-            <p>
-                1. 会员未获得或已丧失会员资格的；</br>
-                2. 会员在加入平台时，或在审核调查过程提供虚假信息（含虚假联系方式），刻意隐瞒事实或未履行如实告知义务的；</br>
-                3. 会员在加入平台时或加入后的观察期内已患有癌症或有其他重大疾病史（中国保险行业协会与中国医师协会共同制定《重大疾病保险的疾病定义使用规范》）；</br>
-                4. 会员在观察期满以后确诊罹患癌症等重大疾病，但是在观察期内已经通过其他任何诊断手段发现疑似，或者已经开始实施针对治疗或导致“重大疾病”的相关疾病就诊；</br>
-                5. 会员吸食或者注射毒品；</br>
-                6. 会员有遗传性疾病，先天性畸形、变形或染色体异常；</br>
-                7. 会员感染艾滋病病毒或患艾滋病；</br>
-                8. 核爆炸、核辐射或者核污染；</br>
-            </p>
-        </div>
-        </div>
 
     </div>
-    <div class="bitmap-box">
-        <h2>sss</h2>
-        <h3>jkasjdlasjdla</h3>
-        <div class="code-img">
-            <img src="./images/Bitmap.jpg" width="100%" alt="">
-        </div>
-    </div>
+
+    
 
 
-    <script>
-        var openCode = function(){
+<script>
+    var openCode = function () {
         $(".mask2").show();
         $(".bitmap-box").show();
     }
-    var closeCode = function(){
+    var closeCode = function () {
         $(".mask2").hide();
         $(".bitmap-box").hide();
     }
+    var hideAddOk = function(){
+        setTimeout(function(){
+            $(".tip-box-ok").hide()
+        },2000);
+    }
+    $(".close-btn").click(function(){
+        _czc.push(["_trackEvent",'我的互助','关闭二维码',lurkDesc,'','']);
+    });
+
     Zepto(function($) {
         $(".click-li").click(function(){
             var num = $(this).attr("data-li-num");
+            var statYm = $(this).attr("data-statistics-ym");
+            _czc.push(["_trackEvent",'我的互助',statYm,lurkDesc,'','']);
+            /*
             $(".tip").show();
             $(".tip .active").removeClass('active');
             $(".tip-"+num).addClass('active');
             $(".mask").show();
             $("body").addClass("ov");
+
+            */
+            $(".tip").hide();
+            $(".tip .active").removeClass('active');
+            $(".tip-"+num).parent().show();
+            $(".tip-"+num).addClass("active");
+
+            $(".mengchen").show();
         });
         $(".tip-close-btn").click(function(){
+            /*
             $(".tip").hide();
             $(".mask").hide();
             $(".ov").removeClass("ov");
+            */
+            $(".tip").hide();
+            $(".mengchen").hide();
         });
         $(".close-btn").click(function(){
             closeCode();
@@ -465,7 +435,7 @@
         var timer;
         $(".goInvitation").click(function(){
             show();
-            _czc.push(["_trackEvent",'我的互助','分享点击',channelId+'_'+shareTextId,'','invite']);
+            _czc.push(["_trackEvent",'我的互助','分享点击',lurkDesc,'','invite']);
             //点击影藏
             $(".mask").on("click",function(){
                 hide();
@@ -478,8 +448,7 @@
             },5000);
         });
     });
-
-    </script>
+</script>
 </body>
 <style>
     .no-info {
@@ -489,32 +458,42 @@
         left: 50%;
         margin-left: -5rem;
     }
-    
-    .no-info-content {
+
+    .no-info-content{
         width: 6.5rem;
         margin: 0 auto;
         height: 6rem;
     }
-    
+
     .no-info-text {
         font-size: 0.8rem;
         color: #4A4A4A;
         text-align: center;
     }
-    
-    .no-info-page .top-tab a {
+    .no-info-page .top-tab a{
         background-color: #f7f7f7;
-        color: #4A4A4A;
+        color:#4A4A4A;
     }
-    
-    .no-info-page .top-tab .active a {
+    .no-info-page .top-tab .active a{
         background-color: #fff;
-        color: #4A4A4A;
+        color:#4A4A4A;
     }
-    
-    .no-info-page {
+    .no-info-page{
         background-color: #fff;
+    }
+    .tip2 {
+        height: 50%!important;
+        top: 25%!important;
+    }
+    .mengchen {
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.5;
+        position: fixed;
+        z-index: 1000;
+        display: none;
     }
 </style>
-
 </html>
+
