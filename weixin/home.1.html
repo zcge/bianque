@@ -9,214 +9,505 @@
         _czc.push(["_setAccount", "1259101635"]);
     </script>
     <meta charset="UTF-8">
-    <title>扁鹊兄弟互助计划</title>
+    <title>扁鹊兄弟互助</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="keywords" content=“扁鹊兄弟互助平台,扁鹊兄弟,网络互助平台,兄弟互助,互助平台,网络互助,网络保障平台,网络保障” />
+    <meta name="description" content=“扁鹊兄弟互助平台,更低互助金,更高更公平的可信赖的保障” />
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
     <meta content="telephone=no" name="format-detection">
-    <link rel="stylesheet" href="./style/home2.css">
+    <link rel="stylesheet" href="http://res.xiongdihuzhu.com/res/weixin/style/home2.css">
+
     <link rel="stylesheet" href="http://res.xiongdihuzhu.com/res/weixin/style/base.css">
-    <link rel="stylesheet" href="http://res.xiongdihuzhu.com/res/weixin/style/tip.css">
-   
-    <script src="./js/iscroll.js"></script>
-    <script src="http://res.xiongdihuzhu.com/res/weixin/js/zepto.js"></script>
+    <link rel="stylesheet" href="http://res.xiongdihuzhu.com/res/weixin/style/mutualaid.css">
+
+    <script src="http://res.xiongdihuzhu.com/res/weixin/js/zepto-min.js"></script>
     <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script>
-        !function () {
+        ! function() {
             function a() {
                 document.documentElement.style.fontSize = document.documentElement.clientWidth / 16 + "px"
             }
-
             var b = null;
-            window.addEventListener("resize", function () {
+            window.addEventListener("resize", function() {
                 clearTimeout(b), b = setTimeout(a, 300)
             }, !1), a()
         }(window);
     </script>
-</head>
+        <script>
+        var channelId='渠道'+1;
+        var shareTextId='文案'+1;
+        var lurkDesc=channelId+'_'+shareTextId;
+        _czc.push(["_trackEvent",'我的互助','访问',lurkDesc,'','']);
+        // _czc.push(["_trackEvent",'重疾互助_'+channelId,'点连接','点连接','','']);
+                        _czc.push(["_trackEvent", '我的互助', '加入成功', lurkDesc, '', '']);
+            
+    </script>
+    <script>
+        wx.config({
+                        appId: 'wxf9b1fd6025a558a4',
+            timestamp:1466682573 ,
+            nonceStr: '038ea913-7963-4444-a196-e123fdaeeec6',
+            signature: '27e16ef213c5f09420615083ee1c96b49f771c4f',
+            jsApiList: [
+                /*
+                 * 所有要调用的 API 都要加到这个列表中
+                 * 这里以图像接口为例
+                 */
+                "onMenuShareAppMessage",
+                "onMenuShareTimeline"
+            ]
+        });
+        wx.ready(function () {
+            wx.onMenuShareTimeline({
+                title: '黄建飞看不起病?来这里免费领取30万保证金',
+                link: 'http://www.xiantiaokeji.com/activity/ali.htm?activityId=1&channelId=1&shareTextId=1&shareUserId=68&shareLevel=1&f=t',
+                imgUrl: 'http://wx.qlogo.cn/mmopen/XnlWcDymkn44Wgl2PTd5GMLjn4vNRnjWakgajRovo9u2m7XpmxiaVLusA5YbXAmibMxaFicds70ibz72B5hQ8FyOporzXyGJubTib/0',
+                trigger: function (res) {
+                    //alert('用户点击分享到朋友圈');
+                },
+                success: function (res) {
+                    //alert('已分享');
+                    _czc.push(["_trackEvent",'我的互助','分享朋友圈',lurkDesc,'','invite']);
 
-<body>
-    <!-- 那个伞的图片切不下来，，让设计师不要做成背景，给张图片，，命名成san.png，，放在home_img下面 -->
-    <div class="main">
-        <div class="first-page">
-            <div class="first-title t16 clearfix">
-                <i class="i1"></i>重大疾病互助计划  <div class="right t14">详情<i></i></div>
+                    Zepto.ajax({
+                        type: 'GET',
+                        url: '/myconcur/share.htm',
+                        // data to be added to query string:
+                        data: {activityId:1,shareUserId:68, channelId:1,shareTextId:1,level:1,f:'t'},
+                        // type of data we are expecting in return:
+                        dataType: 'json',
+                        timeout: 3000,
+                        context: $('body'),
+                        success: function(data){
+                            console.log(data);
+                        },
+                        error: function(xhr, type){
+                            //alert('Ajax error!')
+                            console.error(data);
+                        }
+                    });
+
+
+                },
+                cancel: function (res) {
+                    //alert('已取消');
+                    console.info("cancle")
+                },
+                fail: function (res) {
+                    console.error(JSON.stringify(res));
+                }
+            });
+
+            wx.onMenuShareAppMessage({
+                title: '黄建飞看不起病?来这里免费领取30万保证金', // 分享标题
+                desc: '得了癌症没钱看病,是一种什么体验', // 分享描述
+                link: 'http://www.xiantiaokeji.com/activity/ali.htm?activityId=1&channelId=1&shareTextId=1&shareUserId=68&shareLevel=1&f=a', // 分享链接
+                imgUrl: 'http://wx.qlogo.cn/mmopen/XnlWcDymkn44Wgl2PTd5GMLjn4vNRnjWakgajRovo9u2m7XpmxiaVLusA5YbXAmibMxaFicds70ibz72B5hQ8FyOporzXyGJubTib/0', // 分享图标
+                type: 'link', // 分享类型,music、video或link，不填默认为link
+                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                success: function () {
+                    //alert('已分享');
+                    _czc.push(["_trackEvent",'我的互助','分享给朋友',lurkDesc,'','invite']);
+
+                    Zepto.ajax({
+                        type: 'GET',
+                        url: '/myconcur/share.htm',
+                        // data to be added to query string:
+                        data: {activityId:1,shareUserId:68, channelId:1,shareTextId:1,level:1,f:'a'},
+                        // type of data we are expecting in return:
+                        dataType: 'json',
+                        timeout: 3000,
+                        context: $('body'),
+                        success: function(data){
+                            console.log(data);
+                        },
+                        error: function(xhr, type){
+                            //alert('Ajax error!')
+                            console.error(data);
+                        }
+                    });
+                                    //openCode();
+                
+                },
+                cancel: function () {
+                    console.error(data);
+                }
+            });
+        });
+    </script>
+
+</head>
+<body >
+<div class="mengchen" ></div>
+<div style="display:none">
+    <script src="http://s95.cnzz.com/z_stat.php?id=1259101635&web_id=1259101635" language="JavaScript"></script>
+</div>
+
+<div class="mask"></div>
+<div class="arrow">
+    <img src="http://res.xiongdihuzhu.com/res/weixin/images/jiantou.png" width="100%" alt="">
+</div>
+    
+        <div class="tip-box-ok">
+            <div class="box-img-ok">
+                <img src="http://res.xiongdihuzhu.com/res/weixin/images/ok-circle.png" width="100%" alt="">
             </div>
-            <div class="page-footer clearfix t30">
-                <div class="left">
-                    <h2>0</h2>
-                    <span>已互助人数</span>
-                </div>
-                <div class="right">
-                    <h2>213450</h2>
-                    <span>计划总人数</span>
-                </div>
-            </div>
+            <h2>加入成功!</h2>
         </div>
-        <div class="one-page">
-            <div class="photo">
-                <img src="./images/photo.jpg" width="100%" alt="">
-            </div>
-            <div class="name t14">贾乃亮</div>
-            <div class="wait-time t12">
-                等待期还剩178天<br />
-                至2016-12-5
-            </div>
-            <div class="home-box flex-box t18">
-                <div class="flex-item">
-                    <h2>25</h2>
-                    <span>年龄</span>
+            <!-- 顶部tab按钮 -->
+<div >
+    <ul class="top-tab flex-box">
+        <li class="flex-item">
+            <a href="http://www.xiantiaokeji.com/concur/detail.htm?1=1" class="a-fill" style="background-color: #F4F4F4;font-size: 16px;color: #4A4A4A;">
+                <i class="icon i1"></i>互助计划
+            </a>
+        </li>
+        <li class="flex-item active">
+            <a href="http://www.xiantiaokeji.com/myconcur/index.htm?1=1" class="a-fill" style="background-color: #FFFFFF;font-size: 16px;color: #4A4A4A;">
+                <i class="icon i2"></i>我的互助
+            </a>
+        </li>
+    </ul>
+            <div class="main" style=" padding-bottom: 4.8rem;">
+            <div class="first-page">
+                <div class="first-title t16 clearfix">
+                    <i class="i1"></i>重大疾病互助计划 <div class="right t14"><a href="http://www.xiantiaokeji.com/concur/detail.htm?1=1">详情<i></i><a/></div>
                 </div>
-                <div class="flex-item">
-                    <h2>1</h2>
-                    <span>分摊系数</span>
-                </div>
-                <div class="flex-item">
-                    <h2>3</h2>
-                    <span>每次最多分摊（元）</span>
-                </div>
-            </div>
-            <div class="page-footer clearfix t18">
-                <div class="left">
-                    <h2>310000</h2>
-                    <span>最高可获互助金</span>
-                </div>
-                <div class="right">
-                    <h2>+11</h2>
-                    <span>今日增额度</span>
+                <div class="page-footer clearfix t30">
+                    <div class="left">
+                        <h2>0</h2>
+                        <span>已互助人数</span>
+                    </div>
+                    <div class="right">
+                        <h2>7</h2>
+                        <span>计划总人数</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="one-page">
-            <div class="photo">
-                <img src="./images/photo.jpg" width="100%" alt="">
+                                        <div class="one-page">
+                    <div class="photo">
+                                                    <img src="http://wx.qlogo.cn/mmopen/XnlWcDymkn44Wgl2PTd5GMLjn4vNRnjWakgajRovo9u2m7XpmxiaVLusA5YbXAmibMxaFicds70ibz72B5hQ8FyOporzXyGJubTib/0" width="100%" alt="">
+                                            </div>
+                    <div class="name t14">黄建飞</div>
+                                        <div class="wait-time t12 click-li" data-li-num="4" data-statistics-ym="等待期点击">
+                        等待期还剩179天<br />
+                        至2016-12-20
+                    </div>
+                    <div class="home-box flex-box t18">
+                        <div class="flex-item">
+                            <h2>35</h2>
+                            <span>年龄</span>
+                        </div>
+                        <div class="flex-item">
+                            <h2 class="click-li" data-li-num="1" data-statistics-ym="分摊点击">1</h2>
+                            <span>分摊系数</span>
+                        </div>
+                        <div class="flex-item">
+                            <h2 class="click-li" data-li-num="1" data-statistics-ym="每次最多分摊">3</h2>
+                            <span>每次最多分摊（元）</span>
+                        </div>
+                    </div>
+                    <div class="page-footer clearfix t18">
+                        <div class="left">
+                            <h2 class="click-li" data-li-num="0" data-statistics-ym="保障点击">301010</h2>
+                            <span>最高可获互助金</span>
+                        </div>
+                        <div class="right">
+                            <h2 class="click-li" data-li-num="0" data-statistics-ym="今日增额点击">+10</h2>
+                            <span>今日增额度</span>
+                        </div>
+                    </div>
+                </div>
+                        <div class="one-page add-page">
+                <div class="photo">
+                    <img src="http://res.xiongdihuzhu.com/res/weixin/images/home_img/AddBtn.png" width="100%" alt="">
+                </div>
+                <a href="http://www.xiantiaokeji.com/concur/information.htm?type=family&1=1"><div class="add-t t16">添加家人</div></a>
             </div>
-            <div class="name t14">贾乃亮</div>
-            <div class="wait-time t12">
-                等待期还剩178天<br />
-                至2016-12-5
-            </div>
-            <div class="home-box flex-box t18">
-                <div class="flex-item">
-                    <h2>25</h2>
-                    <span>年龄</span>
-                </div>
-                <div class="flex-item">
-                    <h2>1</h2>
-                    <span>分摊系数</span>
-                </div>
-                <div class="flex-item">
-                    <h2>3</h2>
-                    <span>每次最多分摊（元）</span>
-                </div>
-            </div>
-            <div class="page-footer clearfix t18">
-                <div class="left">
-                    <h2>310000</h2>
-                    <span>最高可获互助金</span>
-                </div>
-                <div class="right">
-                    <h2>+11</h2>
-                    <span>今日增额度</span>
-                </div>
-            </div>
-        </div>
-        <div class="one-page add-page">
-            <div class="photo">
-                <img src="./images/home_img/AddBtn.png" width="100%" alt="">
-            </div>
-            <div class="add-t t16">添加家人</div>
-        </div>
-        <div class="first-page">
-            <div class="first-title t16 clearfix">
-                <i class="i2"></i>人身意外互助计划  <div class="right t14">详情<i></i></div>
-            </div>
-            <div class="page-footer clearfix t30">
-                <div class="left">
-                    <h2>0</h2>
-                    <span>已互助人数</span>
-                </div>
-                <div class="right">
-                    <h2>213450</h2>
-                    <span>计划总人数</span>
-                </div>
-            </div>
-        </div>
-        <div class="one-page">
-            <div class="photo">
-                <img src="./images/photo.jpg" width="100%" alt="">
-            </div>
-            <div class="name t14">贾乃亮</div>
-            <div class="wait-time t12">
-                等待期还剩178天<br />
-                至2016-12-5
-            </div>
-            <div class="home-box flex-box t18">
-                <div class="flex-item">
-                    <h2>25</h2>
-                    <span>年龄</span>
-                </div>
-                <div class="flex-item">
-                    <h2>1</h2>
-                    <span>分摊系数</span>
-                </div>
-                <div class="flex-item">
-                    <h2>3</h2>
-                    <span>每次最多分摊（元）</span>
-                </div>
-            </div>
-            <div class="page-footer clearfix t18">
-                <div class="left">
-                    <h2>310000</h2>
-                    <span>最高可获互助金</span>
-                </div>
-                <div class="right">
-                    <h2>+11</h2>
-                    <span>今日增额度</span>
-                </div>
-            </div>
-        </div>
-        <div class="one-page">
-            <div class="photo">
-                <img src="./images/photo.jpg" width="100%" alt="">
-            </div>
-            <div class="name t14">贾乃亮</div>
-            <div class="wait-time t12">
-                等待期还剩178天<br />
-                至2016-12-5
-            </div>
-            <div class="home-box flex-box t18">
-                <div class="flex-item">
-                    <h2>25</h2>
-                    <span>年龄</span>
-                </div>
-                <div class="flex-item">
-                    <h2>1</h2>
-                    <span>分摊系数</span>
-                </div>
-                <div class="flex-item">
-                    <h2>3</h2>
-                    <span>每次最多分摊（元）</span>
-                </div>
-            </div>
-            <div class="page-footer clearfix t18">
-                <div class="left">
-                    <h2>310000</h2>
-                    <span>最高可获互助金</span>
-                </div>
-                <div class="right">
-                    <h2>+11</h2>
-                    <span>今日增额度</span>
-                </div>
-            </div>
-        </div>
-        <div class="one-page add-page">
-            <div class="photo">
-                <img src="./images/home_img/AddBtn.png" width="100%" alt="">
-            </div>
-            <div class="add-t t16">添加家人</div>
+
         </div>
     </div>
-</body>
 
+
+
+
+
+    <div class="footer">
+        <h3>
+            邀请一位朋友加入，保障增加1000元（限10位）
+        </h3>
+        <h4>
+            朋友可多得1万元额外保障
+        </h4>
+        <div class="btn goInvitation" id="invite">马上邀请</div>
+    </div>
+
+    <div class="tip">
+        <div class='tip-head'>
+            <div class="tip-close-btn">
+                <img src="http://res.xiongdihuzhu.com/res/weixin/images/x.png" width="100%" alt="">
+            </div>
+        </div>
+        <div class="tip-page tip-0 active">
+            <div class="tip-title">
+                重疾保障额度
+            </div>
+            <p>重疾保障额度=基础额度+奖励额度+每日增长额度</p>
+            <div class="table-title" style="font-weight: bold">基础额度</div>
+            <table>
+                <tbody>
+                <tr>
+                    <td width="40%" class="left">年龄</td>
+                    <td>重大疾病</td>
+                    <td>特定重大疾病</td>
+                </tr>
+                <tr>
+                    <td width="40%" class="left">出生30天-50周岁</td>
+                    <td>30万元</td>
+                    <td>5万元</td>
+                </tr>
+                <!--<tr>
+                    <td width="40%" class="left">50-80岁</td>
+                    <td colspan="2">用户参加互助捐助额度的3倍</td>
+                </tr>-->
+
+                </tbody>
+            </table>
+
+            <div class="table-title" style="font-weight: bold">奖励额度</div>
+            <table>
+                <tbody>
+                <tr>
+                    <td width="40%" class="left">奖励事项</td>
+                    <td>奖励保障额度</td>
+                </tr>
+                <tr>
+                    <td width="40%" class="left">每邀请一个朋友加入</td>
+                    <td>1000元</td>
+                </tr>
+                <tr>
+                    <td width="40%" class="left">朋友接受邀请加入</td>
+                    <td>朋友获得1万元额度</td>
+                </tr>
+                <tr>
+                    <td width="40%" class="left">关注公众号</td>
+                    <td>1000元</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="table-title" style="font-weight: bold">保额每日增长，不怕10年后看病钱不够用</div>
+            <table>
+                <tbody>
+                <tr>
+                    <td width="40%" class="left">每日增长</td>
+                    <td>10元</td>
+                </tr>
+
+
+                </tbody>
+            </table>
+
+            <a href="http://res.xiongdihuzhu.com/res/static/article.html#zdjb"><div class="tip-title clearfix">50种重大疾病详情<i></i></div></a>
+        </div>
+
+        <div class="tip-page tip-1">
+            <div class="tip-title">
+                分摊系数计算
+            </div>
+            <table>
+                <tbody>
+                <tr>
+                    <td width="40%" class="left">周岁（含）</td>
+                    <td>扣费系数</td>
+                    <td>单次扣费上限</td>
+                </tr>
+                <tr>
+                    <td width="40%" class="left">出生满30天-18周岁</td>
+                    <td>0.5</td>
+                    <td>1.5元</td>
+                </tr>
+                <tr>
+                    <td width="40%" class="left">18-35</td>
+                    <td>1</td>
+                    <td>3元</td>
+                </tr>
+                <tr>
+                    <td width="40%" class="left">36-50周岁</td>
+                    <td>2</td>
+                    <td>6元</td>
+                </tr>
+                <tr>
+                    <td width="40%" class="left">50-80周岁以上</td>
+                    <td>不扣费</td>
+                    <td>不扣费</td>
+                </tr>
+                </tbody>
+            </table>
+            <p>
+                注：计划成员越多每次均摊额越少</br>
+                <em>计算公式：</em></br>
+                自己支付的互助金= 自己互助系数/该计划全体成员总系数之和*受助会员互助金额
+            </p>
+        </div>
+
+    </div>
+
+    <div class="tip tip2">
+        <div class='tip-head'>
+            <div class="tip-close-btn">
+                <img src="http://res.xiongdihuzhu.com/res/weixin/images/x.png" width="100%" alt="">
+            </div>
+        </div>
+
+        <div class="tip-page tip-3">
+            <div class="tip-title">
+                计划与小组
+            </div>
+            <p>
+                1. 计划由多个小组构成，小组成员发生意外后，由整个计划所有成员进行分摊。</br>
+                2. 单一小组成员超过10万人以后，可以申请单独成立一个保障计划，并可制定专门的保障条款。</br>
+                3. 一个会员在一个计划中，仅能参加一个小组，可在多个小组中切换。</br>
+            </p>
+        </div>
+        <div class="tip-page tip-4">
+            <div class="tip-title">
+                等待期
+            </div>
+            <p>
+                1. 会员从加入平台开始计算180天后，开始享有发生重大疾病可以申请理赔的权利。</br>
+                2. 设置等待期的原因：为了保护会员的利益，预防一些会员带病参加互助，恶意获取互助金。
+            </p>
+
+        </div>
+
+    </div>
+
+    
+
+
+<script>
+    var openCode = function () {
+        $(".mask2").show();
+        $(".bitmap-box").show();
+    }
+    var closeCode = function () {
+        $(".mask2").hide();
+        $(".bitmap-box").hide();
+    }
+    var hideAddOk = function () {
+        setTimeout(function () {
+            $(".tip-box-ok").hide()
+        }, 2000);
+    }
+                                hideAddOk();
+                        $(".close-btn").click(function(){
+        _czc.push(["_trackEvent",'我的互助','关闭二维码',lurkDesc,'','']);
+    });
+
+    Zepto(function($) {
+        $(".click-li").click(function(){
+            var num = $(this).attr("data-li-num");
+            var statYm = $(this).attr("data-statistics-ym");
+            _czc.push(["_trackEvent",'我的互助',statYm,lurkDesc,'','']);
+            /*
+            $(".tip").show();
+            $(".tip .active").removeClass('active');
+            $(".tip-"+num).addClass('active');
+            $(".mask").show();
+            $("body").addClass("ov");
+
+            */
+            $(".tip").hide();
+            $(".tip .active").removeClass('active');
+            $(".tip-"+num).parent().show();
+            $(".tip-"+num).addClass("active");
+
+            $(".mengchen").show();
+        });
+        $(".tip-close-btn").click(function(){
+            /*
+            $(".tip").hide();
+            $(".mask").hide();
+            $(".ov").removeClass("ov");
+            */
+            $(".tip").hide();
+            $(".mengchen").hide();
+        });
+        $(".close-btn").click(function(){
+            closeCode();
+        });
+        var maskDom = $(".mask");
+        var arrow = $(".arrow");
+        var show = function(){
+            maskDom.show();
+            arrow.show();
+        }
+        var hide = function(){
+            maskDom.hide();
+            arrow.hide();
+        }
+        var timer;
+        $(".goInvitation").click(function(){
+            show();
+            _czc.push(["_trackEvent",'我的互助','分享点击',lurkDesc,'','invite']);
+            //点击影藏
+            $(".mask").on("click",function(){
+                hide();
+                clearTimeout(timer);
+            });
+            //延迟影藏
+            timer = setTimeout(function(){
+                hide();
+                clearTimeout(timer);
+            },5000);
+        });
+    });
+</script>
+</body>
+<style>
+    .no-info {
+        width: 10rem;
+        position: fixed;
+        top: 4rem;
+        left: 50%;
+        margin-left: -5rem;
+    }
+
+    .no-info-content{
+        width: 6.5rem;
+        margin: 0 auto;
+        height: 6rem;
+    }
+
+    .no-info-text {
+        font-size: 0.8rem;
+        color: #4A4A4A;
+        text-align: center;
+    }
+    .no-info-page .top-tab a{
+        background-color: #f7f7f7;
+        color:#4A4A4A;
+    }
+    .no-info-page .top-tab .active a{
+        background-color: #fff;
+        color:#4A4A4A;
+    }
+    .no-info-page{
+        background-color: #fff;
+    }
+    .tip2 {
+        height: 50%!important;
+        top: 25%!important;
+    }
+    .mengchen {
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.5;
+        position: fixed;
+        z-index: 1000;
+        display: none;
+    }
+</style>
 </html>

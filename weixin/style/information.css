@@ -5,10 +5,11 @@ input{
 	border:0;
 }
 .small-tip{
-	margin-top: 0.68rem;
+	width: 80%;
+	margin: 0.68rem auto 0 auto;
 	font-size: 0.597rem;
 	color:#9B9B9B;
-	text-align: center;
+	text-align: left;
 }
 .greenbutton{
 	width: 92%;

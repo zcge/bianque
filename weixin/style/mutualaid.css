@@ -23,16 +23,16 @@ body {
     font-size: 0.7rem;
     height: 1.8rem;
     line-height: 1.8rem;
-    background-color: #67b654;
+    background-color: #F3F3F3;
 }
 
 .top-tab a {
-    color: #a3d398;
+    color: #C7C7C7;
 }
 
 .top-tab .active a {
-    background-color: #6EC159;
-    color: #fff;
+    background-color: #fff;
+    color: #a3d398;
 }
 
 .a-fill {
@@ -369,6 +369,7 @@ body {
 }
 /*已经加入样式*/
 .tip-box-ok{
+    z-index:1000;
     height: 8.82rem;
     width:11rem;
     position: fixed;
@@ -392,4 +393,5 @@ body {
     font-family:'iconfont';
     color:red;
 }
+
 
