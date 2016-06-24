@@ -121,6 +121,7 @@ body {
 }
 
 .footer {
+    z-index: 500;
     padding-top: 0.5rem;
     background-color: #F5A623;
     position: fixed;
