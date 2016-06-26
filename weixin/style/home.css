@@ -213,6 +213,7 @@ body {
     width: 100%;
     text-align: center;
     color: #fff;
+    z-index: 300;
     background-color: #6cc159;
     position: fixed;
     bottom: 0;
@@ -989,12 +990,14 @@ input{
     height: 0.8rem;
     margin-right: 0.2rem;
     background-image: url("../images/home_img/ren_1.png");
+    vertical-align: baseline;
 }
 .top-tab .i1{
     width:0.8rem;
     height: 0.8rem;
     margin-right: 0.2rem;
     background-image: url("../images/home_img/shu_1.png");
+    vertical-align: baseline;
 }
 /*字体部分*/
 .t16{

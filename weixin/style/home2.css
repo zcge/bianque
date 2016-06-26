@@ -89,6 +89,20 @@
    border-bottom: 1px solid #F2F2F2;
    
 }
+.page-lists .photo img{
+    padding: 10%;
+    background-color: #fff;
+    border-radius: 50%;
+    display:block;
+}
+.one-page .photo:after{
+    content:'';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border:10px solid #a12;
+    position: absolute;
+}
 .one-page .home-box span,.one-page .page-footer span{
     font-size:0.512rem;
     color:#9B9B9B;
@@ -182,10 +196,13 @@
     height: 0.8rem;
     margin-right: 0.2rem;
     background-image: url("../images/home_img/ren.png");
+    vertical-align: baseline;
 }
 .top-tab .i1{
+     vertical-align: baseline;
      width:0.8rem;
     height: 0.8rem;
     margin-right: 0.2rem;
     background-image: url("../images/home_img/shu.png");
 }
+
