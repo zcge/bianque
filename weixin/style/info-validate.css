@@ -1,3 +1,7 @@
+body{
+    height:100%;
+    
+}
 .icon-box{
     width:90%;
     margin: 0 auto;
@@ -47,4 +51,7 @@
 }
 .verify{
     margin-top:1rem;
+}
+.verifymobile{
+    width: 90%;
 }

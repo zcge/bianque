@@ -30,10 +30,14 @@
             var b = null;
             window.addEventListener("resize", function () {
                 clearTimeout(b), b = setTimeout(a, 300)
-            }, !1), a()
+            }, !1), a();
+           
         }(window);
     </script>
     <style>
+        body{
+            position: relative;
+        }
         .verify {
             line-height: 1.5;
             width: 10.83rem;
@@ -49,7 +53,7 @@
         }
         
         .verifymobile {
-            width: 92%;
+            width: 90%;
             margin: 0 auto;
             margin-top: 1.28rem;
             background-color: #6EC159;
@@ -286,7 +290,7 @@
         <div class="greenbutton" style="height: 2.1rem;line-height: 2.1rem;display: none;">
             完成
         </div>
-
+        <div class="celebrate"></div>
         <div class="icon-box flex-box">
             <div class="icon-item flex-item">
                 <div class="icon-img">
@@ -312,6 +316,7 @@
     </div>
     <script>
     Zepto(function ($) {
+        (function(){$("body").height(document.body.scrollHeight+"px")})();
         var checkUserName = function (userName, result) {
             userName=userName.trim();
             if (userName != "") {
