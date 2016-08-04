@@ -1,0 +1,52 @@
+.care-title{
+    font-size: 1.2rem;
+    color:#6EC159;
+    text-align: center;
+    margin-top:1rem;
+}
+.care-sub-title{
+    margin-top:0.5rem;
+    font-size: 0.8rem;
+    text-align: center;
+}
+.care-box{
+    border:1px solid #000;
+    position: relative;
+    padding:0.7rem 0;
+    line-height: 1.5;
+    width: 60%;
+    margin:0 auto;
+    border-radius:0.3rem;
+}
+.care-box-title{
+    position: absolute;
+    top:-0.7rem;
+    width:60%;
+    left:20%;
+    font-size: 0.8rem;
+    height: 1.4rem;
+    background-color: #FFF;
+    text-align: center;
+    line-height: 1.4rem;
+}
+.care-box li{
+    font-size: 0.6rem;
+    padding-left: 1rem;
+    position: relative;
+}
+.care-box li:before{
+    content:"";
+    display: block;
+    background-color: #6EC159;
+    position: absolute;
+    top:0.2rem;
+    left:0.3rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+}
+.care-img{
+    width: 80%;
+    margin:2rem auto;
+    
+}

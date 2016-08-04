@@ -1,0 +1,50 @@
+.icon-box{
+    width:90%;
+    margin: 0 auto;
+    border-radius:0.3rem;
+    border:1px solid #a4a4a4;
+    margin-top:1rem;
+    padding:0.2rem 0;
+}
+.icon-item{
+    font-size: 0.6rem;
+    color:#a4a4a4;
+}
+.icon-item span{
+    display: block;
+    width: 85%;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+.icon-img{
+    width: 1rem;
+    margin: 0 auto;
+}
+.small-tip a{
+    color:#24a1ff;
+}
+.info-title{
+    color:#000;
+    font-weight: bold;
+    line-height: 1.5;
+    padding:0.5rem 0 0.5rem 5%;
+}
+.form{
+    margin-top:0;
+}
+.box-foot{
+   	position: absolute;
+    bottom:2rem;
+}
+.form-table{
+    width:90%;
+    margin:0 auto;
+    background-color: #fff;
+}
+.form{
+    background-color: inherit;
+}
+.verify{
+    margin-top:1rem;
+}
