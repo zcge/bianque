@@ -1,0 +1,39 @@
+.anno-title{
+    height: 6rem;
+}
+.anno-title-text{
+    padding-left: 5%;
+    font-size: 1.2rem;
+    line-height: 6rem;
+}
+.anno-title-img-box{
+    padding-top:1rem;
+    width:50%;
+    position: relative;
+    left:40%;
+    top:10%;
+}
+.anno-ul{
+    background-color:#f6f6f6;
+    padding:0.5rem 0;
+    line-height: 1.5;
+}
+.anno-ul li{
+    padding-right:5%;
+    padding-left:10%;
+    position: relative;
+}
+.anno-ul li:before{
+    content: "";
+    display: block;
+    background-color: #6EC159;
+    position: absolute;
+    top: 0.4rem;
+    left: 1.1rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+}
+.anno-ul2 li:before{
+     background-color: #F5A623;
+}
